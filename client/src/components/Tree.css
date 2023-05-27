@@ -1,0 +1,11 @@
+#tree {
+  width: 250px;
+  height: 100%;
+  color: #dee2ff;
+}
+
+@media only screen and (max-width: 600px) {
+  #tree {
+    display: none;
+  }
+}
