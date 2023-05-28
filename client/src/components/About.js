@@ -13,15 +13,17 @@ const About = () => {
       <p>
         I am familiar with and have utilized a variety of technologies,
         including:
-        <ul>
-          <li>JavaScript ES6+</li>
-          <li>React.JS</li>
-          <li>MongoDB</li>
-          <li>C</li>
-          <li>Three.js</li>
-          <li>Node.JS</li>
-          <li>Express.JS</li>
-        </ul>
+        <span>
+          <ul>
+            <li>JavaScript ES6+</li>
+            <li>React.JS</li>
+            <li>MongoDB</li>
+            <li>C</li>
+            <li>Three.js</li>
+            <li>Node.JS</li>
+            <li>Express.JS</li>
+          </ul>
+        </span>
       </p>
     </div>
   );
