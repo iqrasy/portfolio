@@ -20,19 +20,21 @@ const About = () => {
         </AboutContent>
       </AboutMe>
       <Tech>
-        <p>Among the technologies I am familiar with and have used are:</p>
-        <span>
-          <ul>
-            <li>❐ JavaScript ES6+</li>
-            <li>❐ React.JS</li>
-            <li>❐ MongoDB</li>
-            <li>❐ C</li>
-            <li>❐ Three.js</li>
-            <li>❐ Node.JS</li>
-            <li>❐ Express.JS</li>
-            <li>❐ Bootstrap</li>
-          </ul>
-        </span>
+        <div>
+          <p>Among the technologies I am familiar with and have used are:</p>
+          <span>
+            <ul>
+              <li>❐ JavaScript ES6+</li>
+              <li>❐ React.JS</li>
+              <li>❐ MongoDB</li>
+              <li>❐ C</li>
+              <li>❐ Three.js</li>
+              <li>❐ Node.JS</li>
+              <li>❐ Express.JS</li>
+              <li>❐ Bootstrap</li>
+            </ul>
+          </span>
+        </div>
       </Tech>
     </Div>
   );
@@ -45,25 +47,30 @@ const Div = styled.div`
 `;
 
 const Tech = styled.div`
-  display: flex !important;
-  flex-direction: column !important;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  width: 92%;
+  padding: 2rem 0 0 2rem;
+  width: 85%;
   height: 27vh;
-  padding: 0.6rem;
   margin-top: 10rem;
   z-index: 2;
 
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   ul {
     width: 18rem;
-    padding: 0;
+    padding-left: 5rem;
     margin-top: 5rem;
     list-style-type: none;
     display: grid;
     align-items: right;
-    justify-content: center !important;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-gap: 0.1rem;
@@ -71,40 +78,46 @@ const Tech = styled.div`
 
   p {
     font-size: 1.5rem;
-    padding: 0;
+    padding-top: 1rem;
     line-height: 1.5;
     width: 15rem;
-    align-items: left;
   }
 
   @media only screen and (max-width: 600px) {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: left !important;
-    width: 85%;
-    height: 10vh;
-    padding: 2rem;
-    margin-top: 1rem;
-    z-index: 2;
+    align-items: center;
+    height: 35vh;
+    width: 70%;
+    padding: 0 2rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      grid-gap: 0.1rem;
+    }
+
+    ul {
+      width: 17rem;
+      margin-top: 1rem;
+    }
 
     p {
       font-size: 1rem;
-      padding: 0;
       line-height: 1.5;
-      width: 15rem;
+      width: 12rem;
     }
   }
 `;
 
 const AboutMe = styled.div`
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 85%;
   height: 27vh;
-  padding: 2rem;
+  padding: 2rem 0 0 2rem;
   z-index: 2;
 
   h1 {
@@ -123,9 +136,9 @@ const AboutMe = styled.div`
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    align-items: left !important;
-    width: 80%;
-    height: 40vh;
+    align-items: left;
+    width: 75%;
+    height: 20vh;
     z-index: 2;
 
     h1 {
@@ -143,10 +156,6 @@ const AboutMe = styled.div`
 const AboutContent = styled.div`
   display: flex;
   align-items: center;
-
-  @media only screen and (max-width: 600px) {
-    margin-bottom: 10rem;
-  }
 `;
 
 const TreeWrapper = styled.div`

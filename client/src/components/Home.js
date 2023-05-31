@@ -31,11 +31,11 @@ const Home = () => {
         <p>
           I'm a full-stack web developer based in Montreal, where I find
           inspiration in the captivating realms of artificial intelligence, the
-          cosmos, coding, and art.
+          cosmos, and art.
         </p>
         <AnimationContainer>
           <LottieContainer>
-            {/* <Lottie options={defaultOptions} /> */}
+            <Lottie options={defaultOptions} />
           </LottieContainer>
         </AnimationContainer>
       </Title>
@@ -65,9 +65,10 @@ const Title = styled.div`
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  width: 100%;
+  width: 99%;
   margin-top: 12rem;
   z-index: 2;
+  /* border: solid pink 1px; */
 
   h1 {
     font-size: 3.5rem;
