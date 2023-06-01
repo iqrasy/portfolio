@@ -25,13 +25,13 @@ const Home = () => {
       <Title>
         <Typist avgTypingDelay={50}>
           <h1>
-            Hey, <span>iqra </span> here
+            Hey, <span>Iqra </span> here
           </h1>
         </Typist>
         <p>
-          I'm a full-stack web developer based in Montreal, where I find
-          inspiration in the captivating realms of artificial intelligence, the
-          cosmos, and art.
+          I'm a full-stack web developer based in Montreal. I find my passion
+          and interest in the realms of artificial intelligence, the cosmos, and
+          art, which continually inspire me.
         </p>
         <AnimationContainer>
           <LottieContainer>

@@ -41,6 +41,22 @@ const Projects = () => {
             restaurants, hotels, and activities all in one place.
           </Description>
         </Project>
+        <Project>
+          <Wrapper>
+            <h1>twitter</h1>
+            <Link
+              href="https://github.com/iqrasy/project-twitter-clone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineGithub />
+            </Link>
+          </Wrapper>
+          <Description>
+            Created a twitter clone which allows you to post tweets, view
+            tweets, like tweets, and view profiles.
+          </Description>
+        </Project>
       </Container>
     </>
   );
@@ -74,7 +90,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 2rem;
-  /* border: solid pink 1px; */
 
   @media only screen and (max-width: 600px) {
     display: block;
@@ -87,11 +102,11 @@ const Container = styled.div`
 const Project = styled.div`
   background-color: #14213d;
   margin: 1rem;
-  height: 40vh;
-  width: 25vh;
+  height: 45vh;
+  width: 30vh !important;
   border-radius: 0.5rem;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
 
   @media only screen and (max-width: 600px) {
     height: 25vh;
@@ -104,7 +119,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  width: 30vh;
+
   @media only screen and (max-width: 600px) {
     h1 {
       font-size: 1.5rem;
