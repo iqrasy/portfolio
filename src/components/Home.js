@@ -1,33 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import About from "./About";
 import Footer from "./Footer";
 import Projects from "./Projects";
 import FadeIn from "./FadeIn";
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
 import styled from "styled-components";
 import circleAnimation from "./circle.json";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import Sidebar from "./Sidebar";
+import Typed from "typed.js";
 
 const Home = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: circleAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Hey, <span>Iqra</span> here"], // Add the <span> tags within the strings array
+      typeSpeed: 50,
+      parseHtml: true, // Enable HTML parsing for the typed content
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   return (
     <Div>
       <Title>
-        <Typist avgTypingDelay={50}>
-          <h1>
-            Hey, <span>Iqra </span> here
-          </h1>
-        </Typist>
+        <div>
+          <h1 ref={el} />
+        </div>
         <p>
           I'm a full-stack web developer based in Montreal. I find my passion
           and interest in the realms of artificial intelligence, the cosmos, and
@@ -35,7 +36,7 @@ const Home = () => {
         </p>
         <AnimationContainer>
           <LottieContainer>
-            <Lottie options={defaultOptions} />
+            <Lottie animationData={circleAnimation} loop={true} />
           </LottieContainer>
         </AnimationContainer>
       </Title>
@@ -68,7 +69,6 @@ const Title = styled.div`
   width: 99%;
   margin-top: 12rem;
   z-index: 2;
-  /* border: solid pink 1px; */
 
   h1 {
     font-size: 3.5rem;

@@ -6,7 +6,6 @@ const Projects = () => {
   return (
     <>
       <Head>projects</Head>
-
       <Container>
         <Project>
           <Wrapper>
@@ -110,7 +109,7 @@ const Project = styled.div`
 
   @media only screen and (max-width: 600px) {
     height: 25vh;
-    width: 40vh;
+    width: 45vh;
     margin: 0 0 1rem 0;
   }
 `;
