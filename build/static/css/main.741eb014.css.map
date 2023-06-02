@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.741eb014.css","mappings":"AAAA,MAGE,aAAc,CADd,WAAY,CADZ,WAGF,CAEA,yCACE,MACE,YACF,CACF","sources":["components/Tree.css"],"sourcesContent":["#tree {\n  width: 250px;\n  height: 100%;\n  color: #dee2ff;\n}\n\n@media only screen and (max-width: 600px) {\n  #tree {\n    display: none;\n  }\n}\n"],"names":[],"sourceRoot":""}
