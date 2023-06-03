@@ -69,19 +69,20 @@ const Head = styled.h1`
   align-items: center;
   font-size: 3.5rem;
 
-  @media only screen and (max-width: 600px) {
-    font-size: 1.5rem;
+  @media only screen and (max-width: 480px) {
+    margin-top: 5rem;
+    font-size: 2rem;
   }
 `;
 
 const Description = styled.p`
   line-height: 1.5;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     font-size: 1rem;
     overflow-y: auto;
-    max-height: 5rem;
-    width: 35vh;
+    max-height: 6rem;
+    width: 30vh;
   }
 `;
 
@@ -90,11 +91,10 @@ const Container = styled.div`
   justify-content: center;
   padding: 2rem;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     display: block;
-    padding: 0;
+    padding-left: 0;
     margin: 0;
-    justify-content: center;
   }
 `;
 
@@ -103,14 +103,15 @@ const Project = styled.div`
   margin: 1rem;
   height: 45vh;
   width: 30vh !important;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   padding: 2rem;
   margin-bottom: 2rem;
 
-  @media only screen and (max-width: 600px) {
-    height: 25vh;
-    width: 45vh;
-    margin: 0 0 1rem 0;
+  @media only screen and (max-width: 480px) {
+    height: 23vh;
+    width: 20vh;
+    margin: 1rem;
+    padding: 1rem;
   }
 `;
 
@@ -121,7 +122,7 @@ const Wrapper = styled.div`
   margin-bottom: 1rem;
   width: 30vh;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     h1 {
       font-size: 1.5rem;
     }
@@ -138,8 +139,8 @@ const Link = styled.a`
     color: #0056b3;
   }
 
-  @media only screen and (max-width: 600px) {
-    font-size: 1.5rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 2rem;
     margin-right: 2rem;
   }
 `;

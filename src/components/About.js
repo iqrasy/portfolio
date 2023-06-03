@@ -46,6 +46,50 @@ const Div = styled.div`
   /* border: solid red 1px; */
 `;
 
+const AboutMe = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 27vh;
+  padding: 2rem 0 0 2rem;
+  z-index: 2;
+
+  h1 {
+    font-size: 3.5rem;
+    display: inline;
+  }
+
+  p {
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1.5;
+    width: 15rem;
+  }
+
+  @media only screen and (max-width: 480px) {
+    align-items: center;
+
+    h1 {
+      font-size: 2rem;
+      display: inline;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      width: 90%;
+      max-width: 30rem;
+    }
+  }
+`;
+
+const AboutContent = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const Tech = styled.div`
   display: flex;
   flex-direction: column;
@@ -83,79 +127,34 @@ const Tech = styled.div`
     width: 15rem;
   }
 
-  @media only screen and (max-width: 600px) {
-    align-items: center;
-    height: 35vh;
-    width: 70%;
-    padding: 0 2rem;
+  @media only screen and (max-width: 480px) {
+    margin-top: 2rem;
+    padding: 0;
+    height: 27vh;
+    width: 95%;
+    /* border: solid pink 1px; */
 
     div {
-      display: flex;
-      align-items: center;
       justify-content: space-between;
       flex-direction: column;
-      grid-gap: 0.1rem;
     }
 
     ul {
+      font-size: 1rem;
       width: 17rem;
-      margin-top: 1rem;
+      margin: 1rem 0;
+      padding-left: 2rem;
+      align-items: center;
     }
 
     p {
       font-size: 1rem;
       line-height: 1.5;
-      width: 12rem;
+      max-width: 17rem;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
-`;
-
-const AboutMe = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 85%;
-  height: 27vh;
-  padding: 2rem 0 0 2rem;
-  z-index: 2;
-
-  h1 {
-    font-size: 3.5rem;
-    display: inline;
-  }
-
-  p {
-    font-size: 1.5rem;
-    padding: 0;
-    line-height: 1.5;
-    width: 15rem;
-  }
-
-  @media only screen and (max-width: 600px) {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: left;
-    width: 75%;
-    height: 20vh;
-    z-index: 2;
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-      width: 12rem;
-    }
-  }
-`;
-
-const AboutContent = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 const TreeWrapper = styled.div`
@@ -163,7 +162,7 @@ const TreeWrapper = styled.div`
   margin-bottom: 2rem;
   margin-top: auto !important;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 `;

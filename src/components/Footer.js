@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiOutlineGithub,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
 import Links from "./Links";
 
 const Footer = () => {
@@ -51,11 +46,12 @@ const FooterContainer = styled.footer`
     color: #6c757d;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     bottom: 0;
     width: 85%;
     text-align: center;
     font-size: 0.6rem;
+    margin-bottom: 4rem;
 
     a {
       font-size: 1rem;

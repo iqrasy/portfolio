@@ -14,9 +14,9 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Hey, <span>Iqra</span> here"], // Add the <span> tags within the strings array
+      strings: ["Hey, <span>Iqra</span> here"],
       typeSpeed: 50,
-      parseHtml: true, // Enable HTML parsing for the typed content
+      parseHtml: true,
     });
     return () => {
       typed.destroy();
@@ -86,27 +86,24 @@ const Title = styled.div`
     width: 30rem;
   }
 
-  @media only screen and (max-width: 600px) {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: left !important;
-    width: 99%;
-    height: 50vh;
-    z-index: 2;
+  @media only screen and (max-width: 480px) {
+    margin-top: 13rem;
+    /* border: solid pink 1px; */
+    height: 30vh;
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     span {
-      font-size: 2rem;
+      font-size: 2.3rem;
     }
 
     p {
       font-size: 1rem;
       line-height: 1.5;
-      width: 12rem;
+      width: 90%;
+      max-width: 30rem;
     }
   }
 `;
@@ -121,12 +118,12 @@ const AnimationContainer = styled.div`
 `;
 
 const LottieContainer = styled.div`
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     position: relative;
-    top: 2rem;
-    left: 13rem;
-    height: 200px;
-    width: 200px;
+    top: 5rem;
+    left: 12rem;
+    height: 13rem;
+    width: 13rem;
     margin-top: 2rem;
   }
 `;
