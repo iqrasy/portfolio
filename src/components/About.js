@@ -138,9 +138,9 @@ const Tech = styled.div`
 
     ul {
       font-size: 1rem;
-      width: 17rem;
+      width: 19rem;
       margin: 1rem 0;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     p {
