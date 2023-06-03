@@ -137,8 +137,8 @@ const Tech = styled.div`
 
     ul {
       display: grid;
-      align-items: right;
-      justify-content: right;
+      /* align-items: right;
+      justify-content: right; */
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 0.1rem;
       font-size: 1rem;
