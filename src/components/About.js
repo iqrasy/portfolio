@@ -145,7 +145,7 @@ const Tech = styled.div`
       font-size: 1rem;
       line-height: 1.5;
       max-width: 19rem;
-      margin-left: auto;
+      margin-left: 2rem;
       margin-right: auto;
     }
   }
