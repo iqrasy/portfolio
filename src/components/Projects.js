@@ -124,7 +124,7 @@ const Project = styled.div`
   }
 
   @media only screen and (max-width: 480px) {
-    height: 23vh;
+    height: 28vh;
     width: 25vh;
     margin: 1rem;
     padding: 1rem;
@@ -134,10 +134,10 @@ const Project = styled.div`
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       overflow-y: auto;
       max-height: 6rem;
-      width: 30vh;
+      width: 26vh;
     }
 
     a {
