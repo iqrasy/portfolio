@@ -93,8 +93,10 @@ const Container = styled.div`
 
   @media only screen and (max-width: 480px) {
     display: block;
-    padding-left: 0;
+    padding-left: 1rem;
     margin: 0;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
