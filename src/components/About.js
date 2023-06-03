@@ -42,9 +42,7 @@ const About = () => {
 
 export default About;
 
-const Div = styled.div`
-  /* border: solid red 1px; */
-`;
+const Div = styled.div``;
 
 const AboutMe = styled.div`
   display: flex;
@@ -132,7 +130,6 @@ const Tech = styled.div`
     padding: 0;
     height: 27vh;
     width: 95%;
-    /* border: solid pink 1px; */
 
     div {
       justify-content: space-between;
@@ -150,7 +147,7 @@ const Tech = styled.div`
     p {
       font-size: 1rem;
       line-height: 1.5;
-      max-width: 17rem;
+      max-width: 19rem;
       margin-left: auto;
       margin-right: auto;
     }
