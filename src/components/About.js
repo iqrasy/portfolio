@@ -129,14 +129,18 @@ const Tech = styled.div`
     margin-top: 2rem;
     padding: 0;
     height: auto;
-    width: 95%;
-
-    div {
-      justify-content: space-between;
-      flex-direction: column;
-    }
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     ul {
+      display: grid;
+      align-items: right;
+      justify-content: right;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0.1rem;
       font-size: 1rem;
       width: 19rem;
       margin: 1rem 0;
@@ -146,7 +150,7 @@ const Tech = styled.div`
     p {
       font-size: 1rem;
       line-height: 1.5;
-      max-width: 19rem;
+      max-width: 10rem;
       margin-left: 1rem;
       margin-right: auto;
     }

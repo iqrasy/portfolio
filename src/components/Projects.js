@@ -111,7 +111,7 @@ const Project = styled.div`
 
   @media only screen and (max-width: 480px) {
     height: 23vh;
-    width: 20vh;
+    width: 25vh;
     margin: 1rem;
     padding: 1rem;
   }
