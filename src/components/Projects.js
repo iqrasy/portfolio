@@ -128,16 +128,17 @@ const Project = styled.div`
     width: 35vh;
     margin: 1rem;
     padding: 1rem;
+    align-items: center;
 
     h1 {
       font-size: 1.5rem;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       overflow-y: auto;
       max-height: 6rem;
-      width: 32vh;
+      width: 34vh;
     }
 
     a {
