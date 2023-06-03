@@ -18,7 +18,6 @@ const Sidebar = () => {
 export default Sidebar;
 
 const Div = styled.div`
-  /* border: solid pink 1px; */
   position: fixed;
   top: 0;
   right: 0;
@@ -31,16 +30,17 @@ const Div = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     position: fixed;
     top: 0;
     right: 0;
     height: 12%;
     width: 5rem;
+    z-index: 10;
 
     a {
       color: #bdb2ff;
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
     }
   }

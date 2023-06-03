@@ -51,7 +51,7 @@ const FooterContainer = styled.footer`
     width: 85%;
     text-align: center;
     font-size: 0.6rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     a {
       font-size: 1rem;
