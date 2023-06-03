@@ -67,8 +67,6 @@ const AboutMe = styled.div`
   }
 
   @media only screen and (max-width: 480px) {
-    align-items: center;
-
     h1 {
       font-size: 2rem;
       display: inline;
@@ -128,7 +126,7 @@ const Tech = styled.div`
   @media only screen and (max-width: 480px) {
     margin-top: 2rem;
     padding: 0;
-    height: 27vh;
+    height: auto;
     width: 95%;
 
     div {
@@ -137,11 +135,15 @@ const Tech = styled.div`
     }
 
     ul {
+      /* font-size: 1rem;
+      width: 17rem;
+      margin: 1rem 0;
+      padding-left: 2rem;
+      align-items: center; */
       font-size: 1rem;
       width: 17rem;
       margin: 1rem 0;
       padding-left: 2rem;
-      align-items: center;
     }
 
     p {
