@@ -135,11 +135,6 @@ const Tech = styled.div`
     }
 
     ul {
-      /* font-size: 1rem;
-      width: 17rem;
-      margin: 1rem 0;
-      padding-left: 2rem;
-      align-items: center; */
       font-size: 1rem;
       width: 17rem;
       margin: 1rem 0;
@@ -150,7 +145,7 @@ const Tech = styled.div`
       font-size: 1rem;
       line-height: 1.5;
       max-width: 19rem;
-      margin-left: 0;
+      margin-left: auto;
       margin-right: auto;
     }
   }
