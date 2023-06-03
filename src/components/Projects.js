@@ -141,7 +141,7 @@ const Project = styled.div`
     }
 
     a {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-right: 2rem;
     }
   }
