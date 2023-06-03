@@ -67,6 +67,8 @@ const AboutMe = styled.div`
   }
 
   @media only screen and (max-width: 480px) {
+    padding: 0 1rem;
+
     h1 {
       font-size: 2rem;
       display: inline;
@@ -75,8 +77,8 @@ const AboutMe = styled.div`
     p {
       font-size: 1rem;
       line-height: 1.5;
-      width: 90%;
-      max-width: 30rem;
+      width: 100%;
+      max-width: 40rem;
     }
   }
 `;
