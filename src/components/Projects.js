@@ -93,10 +93,9 @@ const Container = styled.div`
 
   @media only screen and (max-width: 480px) {
     display: block;
-    padding-left: 1.5rem;
+    padding: 2rem;
+
     margin: 0;
-    align-items: center;
-    justify-content: center;
   }
 `;
 
@@ -112,8 +111,8 @@ const Project = styled.div`
   @media only screen and (max-width: 480px) {
     height: 23vh;
     width: 25vh;
-    margin: 1rem;
-    padding: 1rem;
+    /* margin: 1rem; */
+    /* padding: 1rem; */
   }
 `;
 
