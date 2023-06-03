@@ -14,13 +14,13 @@ const Tree = () => {
     p5.draw = () => {
       p5.clear();
       p5.translate(200, p5.height);
-      // angle = p5.map(
-      //   p5.sin(p5.frameCount * 0.007),
-      //   -1,
-      //   1,
-      //   p5.PI / 2,
-      //   p5.PI / 10
-      // );
+      angle = p5.map(
+        p5.sin(p5.frameCount * 0.007),
+        -1,
+        1,
+        p5.PI / 2,
+        p5.PI / 10
+      );
       branch(110);
     };
 
