@@ -8,53 +8,55 @@ const Projects = () => {
       <Head>projects</Head>
       <Container>
         <Project>
-          <Wrapper>
+          <a
+            href="https://github.com/iqrasy/orbit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
             <h1>orbit</h1>
-            <Link
-              href="https://github.com/iqrasy/orbit"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiOutlineGithub />
-            </Link>
-          </Wrapper>
-          <Description>
+          </div>
+          <p>
             ORBIT is a project that aims to recreate the solar system using
-            Three.js. It provides an interactive and visually appealing
-            representation of the celestial bodies in our solar system.
-          </Description>
+            Three.js, providing an interactive and visually appealing
+            representation of celestial bodies in our solar system.
+          </p>
         </Project>
         <Project>
-          <Wrapper>
+          <a
+            href="https://github.com/iqrasy/Final-Project-Metropole"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
             <h1>metropole</h1>
-            <Link
-              href="https://github.com/iqrasy/Final-Project-Metropole"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiOutlineGithub />
-            </Link>
-          </Wrapper>
-          <Description>
-            Métropole is a travellers guide to Montreal. It allows you to book
-            restaurants, hotels, and activities all in one place.
-          </Description>
+          </div>
+          <p>
+            Métropole is a traveler's guide to Montreal, offering the
+            convenience of booking restaurants, hotels, and activities all in
+            one place.
+          </p>
         </Project>
         <Project>
-          <Wrapper>
+          <a
+            href="https://github.com/iqrasy/project-twitter-clone"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
             <h1>twitter</h1>
-            <Link
-              href="https://github.com/iqrasy/project-twitter-clone"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiOutlineGithub />
-            </Link>
-          </Wrapper>
-          <Description>
-            Created a twitter clone which allows you to post tweets, view
-            tweets, like tweets, and view profiles.
-          </Description>
+          </div>
+          <p>
+            Developed a Twitter clone that enables users to create and share
+            tweets, explore and interact with other users' tweets, engage with
+            likes, and browse user profiles.
+          </p>
         </Project>
       </Container>
     </>
@@ -72,17 +74,6 @@ const Head = styled.h1`
   @media only screen and (max-width: 480px) {
     margin-top: 5rem;
     font-size: 2rem;
-  }
-`;
-
-const Description = styled.p`
-  line-height: 1.5;
-
-  @media only screen and (max-width: 480px) {
-    font-size: 1rem;
-    overflow-y: auto;
-    max-height: 6rem;
-    width: 30vh;
   }
 `;
 
@@ -104,45 +95,54 @@ const Project = styled.div`
   background-color: #14213d;
   margin: 1rem;
   height: 45vh;
-  width: 30vh !important;
+  width: 25vh;
   border-radius: 0.7rem;
-  padding: 2rem;
+  padding: 3rem;
   margin-bottom: 2rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 18vh;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    color: #bdb2ff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
 
   @media only screen and (max-width: 480px) {
     height: 23vh;
     width: 25vh;
     margin: 1rem;
     padding: 1rem;
-  }
-`;
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  width: 30vh;
-
-  @media only screen and (max-width: 480px) {
     h1 {
       font-size: 1.5rem;
     }
-  }
-`;
 
-const Link = styled.a`
-  color: #bdb2ff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    p {
+      font-size: 1rem;
+      overflow-y: auto;
+      max-height: 6rem;
+      width: 30vh;
+    }
 
-  &:hover {
-    color: #0056b3;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 2rem;
-    margin-right: 2rem;
+    a {
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
   }
 `;

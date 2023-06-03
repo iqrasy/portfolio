@@ -9,10 +9,16 @@ const About = () => {
         <h1>about me</h1>
         <AboutContent>
           <p>
-            When I'm not coding, you can find me exploring new art techniques,
+            {/* When I'm not coding, you can find me exploring new art techniques,
             sketching, or experimenting with digital art. I find inspiration in
             blending technology and creativity to bring unique experiences to
-            life.
+            life. */}
+            When I'm not coding, I enjoy exploring new art techniques,
+            sketching, and experimenting with digital art. I find inspiration in
+            blending technology and creativity, striving to bring forth unique
+            experiences to life.
+            {/* As a freelancer, I bring a diverse skill set
+            and a passion for innovation to every project */}
           </p>
           <TreeWrapper>
             <Tree />
