@@ -37,7 +37,7 @@ const About = () => {
               <li>❐ Three.js</li>
               <li>❐ Node.JS</li>
               <li>❐ Express.JS</li>
-              <li>❐ Bootstrap</li>
+              <li>❐ Python</li>
             </ul>
           </span>
         </div>
