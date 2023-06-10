@@ -93,7 +93,7 @@ const Container = styled.div`
 const Project = styled.div`
   background-color: #14213d;
   margin: 1rem;
-  height: 45vh;
+  /* height: 45vh; */
   width: 25vh;
   border-radius: 0.7rem;
   padding: 3rem;
