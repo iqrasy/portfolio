@@ -58,6 +58,24 @@ const Projects = () => {
             likes, and browse user profiles.
           </p>
         </Project>
+        <Project>
+          <a
+            href="https://github.com/iqrasy/python-projects"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
+            <h1>python</h1>
+          </div>
+          <p>
+            This repository is as a comprehensive collection of all my Python
+            projects. It is to showcase my journey and the diverse range of
+            projects I have created and will continue to contribute to over
+            time.
+          </p>
+        </Project>
       </Container>
     </>
   );
@@ -78,8 +96,9 @@ const Head = styled.h1`
 `;
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   padding: 2rem;
 
   @media only screen and (max-width: 480px) {
@@ -93,8 +112,7 @@ const Container = styled.div`
 const Project = styled.div`
   background-color: #14213d;
   margin: 1rem;
-  /* height: 45vh; */
-  width: 25vh;
+  width: 70%;
   border-radius: 0.7rem;
   padding: 3rem;
   margin-bottom: 2rem;
