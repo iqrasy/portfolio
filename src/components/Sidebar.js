@@ -79,4 +79,8 @@ const Button = styled.button`
   background-color: #bdb2ff;
   color: black;
 }
+
+@media only screen and (max-width: 480px){
+  display: none;
+}
 `
