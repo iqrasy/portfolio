@@ -4,6 +4,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import Links from "./Links";
 
 const Sidebar = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Iqra Imran Syed.pdf";
+    link.download = "Iqra Imran Syed.pdf";
+    link.click();
+  }
+
   return (
     <div>
       <Container>
@@ -11,6 +19,9 @@ const Sidebar = () => {
           <Links />
         </Div>
       </Container>
+          <Button onClick={handleDownload}>
+          Download Resume
+        </Button>
     </div>
   );
 };
@@ -45,3 +56,27 @@ const Div = styled.div`
     }
   }
 `;
+
+const Button = styled.button`
+  font-family: 'Nanum Gothic Coding', monospace;
+  background-color: transparent;
+  border: solid 1px #bdb2ff;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 7%;
+  width: 10rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #adb5bd;
+  transition: background-color 0.5s ease-in; 
+
+&:hover {
+  background-color: #ff7f50; 
+  border: none;
+  background-color: #bdb2ff;
+  color: black;
+}
+`

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Tree from "./Tree";
 
 const About = () => {
+
   return (
     <Div>
       <AboutMe>
@@ -44,12 +45,13 @@ export default About;
 
 const Div = styled.div``;
 
+
 const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 90%;
   height: 27vh;
   padding: 2rem 0 0 2rem;
   z-index: 2;
@@ -86,6 +88,7 @@ const AboutMe = styled.div`
 const AboutContent = styled.div`
   display: flex;
   align-items: center;
+  
 `;
 
 const Tech = styled.div`
@@ -137,8 +140,6 @@ const Tech = styled.div`
 
     ul {
       display: grid;
-      /* align-items: right;
-      justify-content: right; */
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 0.1rem;
       font-size: 1rem;
