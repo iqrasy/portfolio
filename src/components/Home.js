@@ -30,7 +30,7 @@ const Home = () => {
           <h1 ref={el} />
         </div>
         <p>
-          I'm a full-stack web developer based in Montreal. I find my passion
+          I'm a full-stack developer based in Montreal. I find my passion
           and interest in the realms of artificial intelligence, the cosmos, and
           art, which continually inspire me.
         </p>

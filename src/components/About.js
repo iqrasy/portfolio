@@ -28,7 +28,7 @@ const About = () => {
               <li>❐ JavaScript ES6+</li>
               <li>❐ React.JS</li>
               <li>❐ MongoDB</li>
-              <li>❐ C</li>
+              <li>❐ Bootstrap</li>
               <li>❐ Three.js</li>
               <li>❐ Node.JS</li>
               <li>❐ Express.JS</li>

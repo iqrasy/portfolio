@@ -7,38 +7,23 @@ const Projects = () => {
     <>
       <Head>projects</Head>
       <Container>
-        <Project>
+      <Project>
           <a
-            href="https://github.com/iqrasy/orbit"
+            href="https://github.com/iqrasy/echo-bot"
             target="_blank"
             rel="noopener noreferrer"
           >
             <AiOutlineGithub />
           </a>
           <div>
-            <h1>orbit</h1>
+            <h1>echo-bot</h1>
           </div>
           <p>
-            ORBIT is a project that aims to recreate the solar system using
-            Three.js, providing an interactive and visually appealing
-            representation of celestial bodies in our solar system.
-          </p>
-        </Project>
-        <Project>
-          <a
-            href="https://github.com/iqrasy/Final-Project-Metropole"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiOutlineGithub />
-          </a>
-          <div>
-            <h1>metropole</h1>
-          </div>
-          <p>
-            Métropole is a traveler's guide to Montreal, offering the
-            convenience of booking restaurants, hotels, and activities all in
-            one place.
+          This project showcases the fundamental capabilities of the Microsoft Bot 
+          Framework by creating a simple and interactive bot. Developed using the 
+          Bot Framework, this bot serves as an illustrative example of how to 
+          design and implement a bot that accepts user input and responds 
+          by echoing the input back to the user.
           </p>
         </Project>
         <Project>
@@ -70,10 +55,64 @@ const Projects = () => {
             <h1>python</h1>
           </div>
           <p>
-            This repository is as a comprehensive collection of all my Python
+            This repository is a comprehensive collection of all my Python
             projects. It is to showcase my journey and the diverse range of
             projects I have created and will continue to contribute to over
             time.
+          </p>
+        </Project>
+        <Project>
+          <a
+            href="https://github.com/iqrasy/Final-Project-Metropole"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
+            <h1>metropole</h1>
+          </div>
+          <p>
+            Métropole is a traveler's guide to Montreal, offering the
+            convenience of booking restaurants, hotels, and activities all in
+            one place.
+          </p>
+        </Project>
+        <Project>
+          <a
+            href="https://github.com/iqrasy/orbit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
+            <h1>orbit</h1>
+          </div>
+          <p>
+            ORBIT is a project that aims to recreate the solar system using
+            Three.js, providing an interactive and visually appealing
+            representation of celestial bodies in our solar system.
+          </p>
+        </Project>
+        <Project>
+          <a
+            href="https://github.com/iqrasy/snake-game"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+          </a>
+          <div>
+            <h1>snake-game</h1>
+          </div>
+          <p>
+          I successfully developed a classic snake game using Python, leveraging 
+          the power of Object-Oriented Programming (OOP) for efficient and organized 
+          code. The game features a player-controlled snake that moves around the 
+          screen. As the snake consumes food, it grows longer, and the objective is 
+          to eat as much food as possible without colliding with the boundaries of the 
+          game or its own tail.
           </p>
         </Project>
       </Container>
