@@ -18,10 +18,6 @@ const Links = () => {
       icon: <AiOutlineLinkedin />,
     },
     {
-      url: "https://twitter.com/Iqrasyy",
-      icon: <AiOutlineTwitter />,
-    },
-    {
       url: "mailto:syiqra@hotmail.com",
       icon: <AiOutlineMail />,
     },

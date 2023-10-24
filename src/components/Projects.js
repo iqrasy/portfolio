@@ -29,6 +29,25 @@ const Projects = () => {
 				</Project>
 				<Project>
 					<a
+						href="https://github.com/iqrasy/AI-article-summarizer"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<AiOutlineGithub />
+					</a>
+					<div>
+						<h1>AI-article-summarizer</h1>
+					</div>
+					<p>
+						I've developed a powerful SaaS article summarizer powered by
+						ChatGPT-4. The frontend, built with React and Redux, offers a
+						seamless user experience. With a strong focus on SEO, this
+						application ensures that content is not only summarized efficiently
+						but also optimized for search engine visibility.
+					</p>
+				</Project>
+				<Project>
+					<a
 						href="https://github.com/iqrasy/echo-bot"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -46,7 +65,7 @@ const Projects = () => {
 						responds by echoing the input back to the user.
 					</p>
 				</Project>
-				<Project>
+				{/* <Project>
 					<a
 						href="https://github.com/iqrasy/project-twitter-clone"
 						target="_blank"
@@ -62,8 +81,8 @@ const Projects = () => {
 						tweets, explore and interact with other users' tweets, engage with
 						likes, and browse user profiles.
 					</p>
-        </Project>
-        <Project>
+				</Project> */}
+				{/* <Project>
 					<a
 						href="https://github.com/iqrasy/Final-Project-Metropole"
 						target="_blank"
@@ -79,8 +98,8 @@ const Projects = () => {
 						convenience of booking restaurants, hotels, and activities all in
 						one place.
 					</p>
-        </Project>
-        <Project>
+				</Project> */}
+				<Project>
 					<a
 						href="https://github.com/iqrasy/snake-game"
 						target="_blank"
@@ -100,25 +119,6 @@ const Projects = () => {
 						without colliding with the boundaries of the game or its own tail.
 					</p>
 				</Project>
-				<Project>
-					<a
-						href="https://github.com/iqrasy/python-projects"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<AiOutlineGithub />
-					</a>
-					<div>
-						<h1>python</h1>
-					</div>
-					<p>
-						This repository is a comprehensive collection of all my Python
-						projects. It is to showcase my journey and the diverse range of
-						projects I have created and will continue to contribute to over
-						time.
-					</p>
-				</Project>
-
 				<Project>
 					<a
 						href="https://github.com/iqrasy/orbit"
