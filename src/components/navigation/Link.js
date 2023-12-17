@@ -30,7 +30,7 @@ const Main = styled.div`
 	/* left: 50%; */
 
 	a {
-		font-size: 1.4rem;
+		font-size: 1rem;
 		padding: 5rem;
 	}
 `;

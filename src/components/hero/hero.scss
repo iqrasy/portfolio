@@ -8,23 +8,23 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	max-width: 75rem;
+	max-width: 70rem;
 	height: 100%;
 	margin: auto;
 	padding-left: 2rem;
 	position: relative;
 
 	h1 {
-		width: 65rem;
+		width: 45rem;
 		line-height: 1.2;
 		font-weight: 300;
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	p {
 		letter-spacing: 0.7rem;
 		margin-bottom: 2rem;
-		font-size: 2rem;
+		font-size: 1.6rem;
 		text-align: left;
 		color: #101110;
 	}
@@ -86,9 +86,9 @@
 
 .about-me {
 	position: relative;
-	top: 10rem;
+	bottom: 2rem;
 	left: 2.2rem;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 }
 
 .button {
@@ -97,7 +97,7 @@
 
 	display: block;
 	position: relative;
-	padding-top: 0.7rem;
+	padding-top: 0.9rem;
 	height: 3rem;
 	width: 10rem;
 	text-align: center;
@@ -171,7 +171,7 @@
 }
 
 .scroll {
-	border: solid black 1px;
+	border: solid black 0.8px;
 	position: relative;
 	right: 25%;
 	bottom: 51rem;
@@ -183,6 +183,6 @@
 	flex-direction: row;
 	position: absolute;
 	top: 60rem;
-	left: 78%;
+	left: 75%;
 	cursor: pointer;
 }
