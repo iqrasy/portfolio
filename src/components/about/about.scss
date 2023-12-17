@@ -1,0 +1,75 @@
+.first {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 80vh;
+	padding: 15rem 0 0 0;
+	z-index: 2;
+}
+
+.about {
+	margin: auto;
+}
+
+.header {
+	font-size: 2.5rem;
+	font-weight: 300;
+	margin-bottom: 4rem;
+}
+
+.text {
+	// padding: 0.4rem;
+
+	font-size: 1.4rem;
+	// letter-spacing: 0.2rem;
+	color: #414141;
+
+	span {
+		color: #000000;
+	}
+}
+
+@keyframes drawCircle {
+	0% {
+		stroke-dasharray: 0 285;
+	}
+	100% {
+		stroke-dasharray: 285 285;
+	}
+}
+
+.button-circle {
+	height: 15rem;
+	position: relative;
+	color: grey;
+	cursor: pointer;
+}
+
+.circle {
+	height: 100%;
+	position: absolute;
+	top: 10rem;
+	right: 10rem;
+	float: right;
+
+	&:hover {
+		animation: drawCircle 1s forwards;
+		color: black;
+	}
+}
+
+.inner-circle {
+	height: 3rem;
+	position: absolute;
+	top: 17rem;
+	right: 16rem;
+	float: right;
+	color: black;
+
+	&:hover {
+		color: black;
+		fill: black;
+	}
+}

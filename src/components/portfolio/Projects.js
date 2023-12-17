@@ -65,40 +65,6 @@ const Projects = () => {
 						responds by echoing the input back to the user.
 					</p>
 				</Project>
-				{/* <Project>
-					<a
-						href="https://github.com/iqrasy/project-twitter-clone"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<AiOutlineGithub />
-					</a>
-					<div>
-						<h1>twitter</h1>
-					</div>
-					<p>
-						Developed a Twitter clone that enables users to create and share
-						tweets, explore and interact with other users' tweets, engage with
-						likes, and browse user profiles.
-					</p>
-				</Project> */}
-				{/* <Project>
-					<a
-						href="https://github.com/iqrasy/Final-Project-Metropole"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<AiOutlineGithub />
-					</a>
-					<div>
-						<h1>metropole</h1>
-					</div>
-					<p>
-						Métropole is a traveler's guide to Montreal, offering the
-						convenience of booking restaurants, hotels, and activities all in
-						one place.
-					</p>
-				</Project> */}
 				<Project>
 					<a
 						href="https://github.com/iqrasy/snake-game"
