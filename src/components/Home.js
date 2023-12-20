@@ -1,5 +1,4 @@
 import React from "react";
-import SidePart from "./navigation/SidePart";
 import About from "./about/About";
 import Footer from "./Footer";
 import styled from "styled-components";
@@ -11,17 +10,24 @@ import ProjectThree from "./portfolio/ProjectThree";
 import ProjectFour from "./portfolio/ProjectFour";
 import Services from "./services/Services";
 import Contact from "./contact/Contact";
+import Link from "./navigation/Link";
+import Projects from "./portfolio/Projects";
 
 const Home = () => {
 	return (
-		<Main>
-			<Div>
+		<>
+			<Side>
+				<Link />
+			</Side>
+			<Main>
 				<section id="Homepage">
-					<SidePart />
 					<Hero />
 				</section>
-				<section id="About Me">
+				<section id="About">
 					<About />
+				</section>
+				<section id="Portfolio">
+					<Projects />
 				</section>
 				<section id="Portfolio">
 					<ProjectOne />
@@ -42,8 +48,8 @@ const Home = () => {
 					<Contact />
 				</section>
 				<Footer />
-			</Div>
-		</Main>
+			</Main>
+		</>
 	);
 };
 
@@ -55,3 +61,11 @@ const Main = styled.div`
 `;
 
 const Div = styled.div``;
+
+const Side = styled.div`
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0.7;
+`;

@@ -47,20 +47,16 @@ const Hero = () => {
 					Exceptional Web Solutions. Your vision, My Expertise
 				</h1>
 			</motion.div>
-			<div className="scroll-down">
-				<div className="about-me">
-					{items.map((item) => (
-						<div key={item}>
-							<a className="button" href={`#${item}`}>
-								{item}
-								<div class="button__horizontal"></div>
-								<div class="button__vertical"></div>
-							</a>
-						</div>
-					))}
-				</div>
+			{/* <div className="scroll-down">
+				{items.map((item) => (
+					<div key={item}>
+						<a className="button" href={`#${item}`}>
+							<span>{item}</span>
+						</a>
+					</div>
+				))}
 				<div className="scroll"></div>
-			</div>
+			</div> */}
 			<div className="blob-container">
 				<div className="blob"></div>
 				<div className="blob-two"></div>

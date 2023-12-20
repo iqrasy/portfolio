@@ -15,22 +15,18 @@ html {
 }
 
 body {
-    /* margin: 0 auto; */
-    /* padding: 5em 0; */
+    margin: 0 auto;
     overflow-y: auto;
     height: 100vh;
-    /* width: 70%; */
     z-index: 10;
     background-image: url(${background}); 
-    font-family: 'Lato', sans-serif;
   }
 
 
 
   span {
     font-weight: bold;
-    /* color: #bdb2ff; */
-    /* font-family: 'VT323', monospace; */
+  
   }
 
   a {
@@ -40,15 +36,15 @@ body {
   }
 
   h1 {
-    /* color: #e0e1dd; */
+   
   }
 
   p {
-    /* color: #adb5bd; */
+ 
   }
 
   footer {
-    /* color: #6c757d; */
+  
   }
 
   @media only screen and (max-width: 480px) {

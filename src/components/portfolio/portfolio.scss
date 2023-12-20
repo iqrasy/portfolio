@@ -1,0 +1,51 @@
+.demoWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 42.5rem;
+	height: 25rem;
+	-webkit-font-smoothing: antialiased;
+	margin: 10rem auto;
+	perspective: 68.75rem;
+	transform-style: preserve-3d;
+	transform: rotateX(-10deg) rotateZ(-5deg);
+}
+
+.box {
+	position: absolute;
+	width: 15.25rem;
+	height: 11.25rem;
+	border-radius: 2rem;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.creative-pro {
+	color: white;
+	height: 20rem;
+	width: 28rem;
+	z-index: -10;
+	background-color: black;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.card-clr {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2rem;
+	position: relative;
+	margin: auto;
+	padding: 1.1rem 1.4rem;
+	transition: all 0.2s ease;
+	z-index: 50;
+	color: white;
+}
+
+.project-text {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	// margin: 10rem auto;
+	background-color: red;
+	width: 20rem;
+}

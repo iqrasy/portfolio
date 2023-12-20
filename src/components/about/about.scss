@@ -22,9 +22,11 @@
 .text {
 	font-size: 1.2rem;
 	color: #414141;
+	font-family: "Melodrama", serif;
 
 	span {
 		color: #000000;
+		font-style: italic;
 	}
 }
 
@@ -40,6 +42,7 @@
 .button-circle {
 	height: 15rem;
 	position: relative;
+	right: 30%;
 	color: grey;
 	cursor: pointer;
 }
@@ -47,7 +50,7 @@
 .circle {
 	height: 100%;
 	position: absolute;
-	top: 10rem;
+	top: 7rem;
 	right: 1rem;
 	float: right;
 
@@ -60,7 +63,7 @@
 .inner-circle {
 	height: 3rem;
 	position: absolute;
-	top: 17.5rem;
+	top: 14rem;
 	right: 7rem;
 	float: right;
 	color: black;
