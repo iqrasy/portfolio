@@ -19,7 +19,6 @@ export default Link;
 const Main = styled.div`
 	display: flex;
 	justify-content: center;
-	/* white-space: nowrap; */
 	align-items: center;
 	flex-direction: row;
 	color: black;

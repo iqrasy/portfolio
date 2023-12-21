@@ -3,7 +3,6 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	// margin: auto;
 	width: 80vh;
 	padding: 5rem 0 0 5rem;
 	z-index: 2;
@@ -31,47 +30,3 @@
 	font-size: 1.2rem;
 	color: #414141;
 }
-
-// @keyframes drawCircle {
-// 	0% {
-// 		stroke-dasharray: 0 285;
-// 	}
-// 	100% {
-// 		stroke-dasharray: 285 285;
-// 	}
-// }
-
-// .button-circle {
-// 	height: 15rem;
-// 	position: relative;
-// 	right: 30%;
-// 	color: grey;
-// 	cursor: pointer;
-// }
-
-// .circle {
-// 	height: 100%;
-// 	position: absolute;
-// 	top: 7rem;
-// 	right: 1rem;
-// 	float: right;
-
-// 	&:hover {
-// 		animation: drawCircle 1s forwards;
-// 		color: black;
-// 	}
-// }
-
-// .inner-circle {
-// 	height: 3rem;
-// 	position: absolute;
-// 	top: 14rem;
-// 	right: 7rem;
-// 	float: right;
-// 	color: black;
-
-// 	&:hover {
-// 		color: black;
-// 		fill: black;
-// 	}
-// }

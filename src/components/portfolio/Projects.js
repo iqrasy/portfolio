@@ -6,7 +6,6 @@ import { Draggable } from "gsap/Draggable";
 import "./portfolio.scss";
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
-console.log(gsap.plugins);
 
 const Projects = () => {
 	const cardData = [
@@ -41,7 +40,6 @@ const Projects = () => {
 				scrub: 0.2,
 				start: "top bottom",
 				end: "bottom top",
-				// markers: true,
 			},
 		});
 
@@ -97,11 +95,6 @@ const Projects = () => {
 		</Div>
 	);
 };
-{
-	/* <div className="project-text">
-				<h2>Double click on title to be get more info on project</h2>
-			</div> */
-}
 
 export default Projects;
 
