@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Draggable } from "gsap/Draggable";
@@ -37,7 +38,7 @@ const Projects = () => {
 			scrollTrigger: {
 				trigger: ".creative-pro",
 				scrub: 0.2,
-				start: "-100px bottom",
+				start: "top bottom",
 				end: "bottom top",
 			},
 		});
@@ -79,7 +80,7 @@ const Projects = () => {
 	}, []);
 
 	return (
-		<>
+		<Div className="firs-cont">
 			<div className="demoWrapper">
 				{cardData.map((card, index) => (
 					<div key={index} className="card box creative-pro">
@@ -91,12 +92,29 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
-
-			{/* <div className="project-text">
-				<h2>Double click on title to be get more info on project</h2>
-			</div> */}
-		</>
+		</Div>
 	);
 };
+{
+	/* <div className="project-text">
+				<h2>Double click on title to be get more info on project</h2>
+			</div> */
+}
 
 export default Projects;
+
+const Div = styled.div`
+	height: 100vh;
+	background-color: hsla(31, 32%, 87%, 1);
+	background-image: radial-gradient(
+			at 2% 98%,
+			hsla(5, 100%, 69%, 1) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 87% 85%, hsla(270, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 50% 51%, hsla(349, 100%, 87%, 1) 0px, transparent 50%),
+		radial-gradient(at 98% 2%, hsla(5, 100%, 69%, 1) 0px, transparent 50%),
+		radial-gradient(at 3% 49%, hsla(240, 66%, 94%, 1) 0px, transparent 50%),
+		radial-gradient(at 4% 3%, hsla(17, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 95% 51%, hsla(240, 66%, 94%, 1) 0px, transparent 50%);
+`;

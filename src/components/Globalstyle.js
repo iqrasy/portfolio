@@ -14,19 +14,29 @@ html {
 
 }
 
+.c {
+   
+}
+
 body {
     margin: 0 auto;
     overflow-y: auto;
     height: 100vh;
     z-index: 10;
     background-image: url(${background}); 
+    /* background-color:hsla(31,32%,87%,1);
+background-image:
+radial-gradient(at 8% 90%, hsla(5,100%,69%,1) 0px, transparent 50%),
+radial-gradient(at 47% 94%, hsla(270,0%,90%,1) 0px, transparent 50%),
+radial-gradient(at 52% 48%, hsla(349,100%,87%,1) 0px, transparent 50%),
+radial-gradient(at 89% 7%, hsla(5,100%,69%,1) 0px, transparent 50%),
+radial-gradient(at 3% 49%, hsla(240,66%,94%,1) 0px, transparent 50%),
+radial-gradient(at 20% 22%, hsla(17,5%,90%,1) 0px, transparent 50%),
+radial-gradient(at 76% 68%, hsla(240,66%,94%,1) 0px, transparent 50%); */
   }
-
-
 
   span {
     font-weight: bold;
-  
   }
 
   a {
@@ -35,29 +45,6 @@ body {
     color: inherit;
   }
 
-  h1 {
-   
-  }
-
-  p {
- 
-  }
-
-  footer {
-  
-  }
-
-  @media only screen and (max-width: 480px) {
-
-    body {
-      
-  
-    }
-
-  p {
-    
-  }
-  }
 `;
 
 export default GlobalStyles;

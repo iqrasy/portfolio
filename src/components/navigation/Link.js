@@ -29,6 +29,6 @@ const Main = styled.div`
 
 	a {
 		font-size: 1rem;
-		padding: 5rem;
+		padding: 0 5rem;
 	}
 `;

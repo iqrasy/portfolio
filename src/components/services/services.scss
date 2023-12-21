@@ -4,15 +4,28 @@
 	grid-template-rows: 1fr;
 	grid-column-gap: 10rem;
 	grid-row-gap: 0px;
-	margin: 10rem auto;
+	// margin: 10rem auto;
 	padding: 10rem 5rem;
+	height: 100vh;
+	background-color: hsla(31, 32%, 87%, 1);
+	background-image: radial-gradient(
+			at 98% 98%,
+			hsla(5, 100%, 69%, 1) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 3% 88%, hsla(270, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 50% 51%, hsla(349, 100%, 87%, 1) 0px, transparent 50%),
+		radial-gradient(at 1% 2%, hsla(5, 100%, 69%, 1) 0px, transparent 50%),
+		radial-gradient(at 3% 49%, hsla(240, 66%, 94%, 1) 0px, transparent 50%),
+		radial-gradient(at 99% 2%, hsla(17, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 95% 51%, hsla(240, 66%, 94%, 1) 0px, transparent 50%);
 }
 
 .main-div {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: flex-start;
-	// align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .main-title {
@@ -24,6 +37,8 @@
 	font-family: "Nunito", sans-serif;
 	font-size: 1.5rem;
 	width: 40vw;
+	padding-left: 5rem;
+	padding-top: 2rem;
 }
 
 .service-container {

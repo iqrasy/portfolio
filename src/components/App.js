@@ -8,6 +8,7 @@ const App = () => {
 		<>
 			<BrowserRouter>
 				<GlobalStyles />
+				
 				<Routes>
 					<Route path="/" element={<Home />} />
 				</Routes>

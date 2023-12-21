@@ -18,10 +18,10 @@ import ProjectSix from "./portfolio/ProjectSix";
 const Home = () => {
 	return (
 		<>
-			<Side>
-				<Link />
-			</Side>
 			<Main>
+				<Side>
+					<Link />
+				</Side>
 				<section id="Homepage">
 					<Hero />
 				</section>
@@ -55,7 +55,6 @@ const Home = () => {
 				<section id="Contact">
 					<Contact />
 				</section>
-				<Footer />
 			</Main>
 		</>
 	);
@@ -76,4 +75,20 @@ const Side = styled.div`
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0.7;
+	/* height: 17vh; */
+	width: 10%;
+	/* background-size: contain;
+	background-position: top; */
+	/* background-color: hsla(30, 31%, 87%, 1);
+	background-image: radial-gradient(
+			at 0% 0%,
+			hsla(5, 100%, 69%, 1) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 40% 20%, hsla(28, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 42% 44%, hsla(349, 100%, 87%, 1) 0px, transparent 50%),
+		radial-gradient(at 81% 75%, hsla(5, 100%, 69%, 1) 0px, transparent 50%),
+		radial-gradient(at 90% 10%, hsla(240, 66%, 94%, 1) 0px, transparent 50%),
+		radial-gradient(at 0% 100%, hsla(22, 0%, 90%, 1) 0px, transparent 50%),
+		radial-gradient(at 80% 100%, hsla(240, 66%, 94%, 1) 0px, transparent 50%); */
 `;
