@@ -50,7 +50,7 @@ const Projects = () => {
 			scrollTrigger: {
 				trigger: ".creative-pro",
 				scrub: 0.2,
-				start: "top bottom",
+				start: "top center",
 				end: "bottom top",
 			},
 		});
