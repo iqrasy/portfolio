@@ -14,10 +14,6 @@ html {
 
 }
 
-.c {
-   
-}
-
 body {
     margin: 0 auto;
     overflow-y: auto;

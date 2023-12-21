@@ -1,10 +1,15 @@
+.wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .container-wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 1fr;
-	grid-column-gap: 10rem;
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 5rem;
 	grid-row-gap: 0px;
-	// margin: 10rem auto;
 	padding: 10rem 5rem;
 	font-family: "Nunito", sans-serif;
 	font-size: 1rem;
@@ -23,10 +28,17 @@
 		radial-gradient(at 95% 51%, hsla(240, 66%, 94%, 1) 0px, transparent 50%);
 }
 
-// .first-grid {
-// }
+.first-grid {
+	font-size: 1.3rem;
+	line-height: 1.4;
+}
 
 .second-grid {
 	font-family: "Stardom", sans-serif;
 	font-size: 3rem;
+}
+
+.project {
+	font-family: "Nunito", sans-serif;
+	font-size: 1rem;
 }
