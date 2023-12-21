@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { Draggable } from "gsap/Draggable";
 import "./portfolio.scss";
 
-gsap.registerPlugin(Draggable, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, Draggable);
+console.log(gsap.plugins);
 
 const Projects = () => {
 	const cardData = [
@@ -40,7 +41,7 @@ const Projects = () => {
 				scrub: 0.2,
 				start: "top bottom",
 				end: "bottom top",
-				markers: true,
+				// markers: true,
 			},
 		});
 
