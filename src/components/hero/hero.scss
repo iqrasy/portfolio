@@ -3,7 +3,6 @@
 }
 
 .pitch {
-	// color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,7 +18,7 @@
 		line-height: 1.2;
 		font-weight: 300;
 		font-size: 2rem;
-		font-family: "Melodrama", serif;
+		font-family: "Nunito", sans-serif;
 	}
 
 	p {
@@ -29,6 +28,15 @@
 		font-size: 6rem;
 		text-align: left;
 		color: #101110;
+	}
+}
+
+@keyframes animateCircles {
+	0% {
+		stroke-dasharray: 0 285;
+	}
+	100% {
+		stroke-dasharray: 285 285;
 	}
 }
 
@@ -72,57 +80,3 @@
 	);
 	filter: blur(65px);
 }
-
-// .button {
-// 	position: relative;
-// 	margin: auto;
-// 	padding: 1.1rem 1.4rem;
-// 	transition: all 0.2s ease;
-// 	text-transform: uppercase;
-
-// 	&:before {
-// 		content: "";
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		display: block;
-// 		border-radius: 28px;
-// 		background: rgba(254, 106, 83, 0.824);
-// 		width: 3.4rem;
-// 		height: 3.4rem;
-// 		transition: all 0.5s ease;
-// 	}
-// 	span {
-// 		position: relative;
-// 		font-size: 0.9rem;
-// 		letter-spacing: 0.25em;
-// 		vertical-align: middle;
-// 	}
-
-// 	&:hover {
-// 		&:before {
-// 			width: 100%;
-// 			background: rgba(254, 106, 83, 0.824);
-// 		}
-// 	}
-// 	&:active {
-// 		transform: scale(0.96);
-// 	}
-// }
-
-// .scroll {
-// 	border: solid black 0.8px;
-// 	position: relative;
-// 	right: 5%;
-// 	bottom: 51rem;
-// 	height: 75vh;
-// }
-
-// .scroll-down {
-// 	display: flex;
-// 	flex-direction: row;
-// 	position: relative;
-// 	bottom: 5rem;
-// 	left: 80%;
-// 	cursor: pointer;
-// }

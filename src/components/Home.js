@@ -12,6 +12,8 @@ import Services from "./services/Services";
 import Contact from "./contact/Contact";
 import Link from "./navigation/Link";
 import Projects from "./portfolio/Projects";
+import ProjectFive from "./portfolio/ProjectFive";
+import ProjectSix from "./portfolio/ProjectSix";
 
 const Home = () => {
 	return (
@@ -40,6 +42,12 @@ const Home = () => {
 				</section>
 				<section id="Portfolio">
 					<ProjectFour />
+				</section>
+				<section id="Portfolio">
+					<ProjectFive />
+				</section>{" "}
+				<section id="Portfolio">
+					<ProjectSix />
 				</section>
 				<section id="Services">
 					<Services />

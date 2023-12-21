@@ -50,18 +50,12 @@ body {
   @media only screen and (max-width: 480px) {
 
     body {
-      /* margin: 0 auto; */
-      /* padding: 3em 0; */
-      /* color: #e0e1dd; */
-      /* background-color: #0d1b2a; */
-      /* overflow-y: auto; */
-      /* height: auto; */
-      /* width: 90%; */
+      
   
     }
 
   p {
-    /* color: #adb5bd; */
+    
   }
   }
 `;

@@ -16,23 +16,7 @@ const textVariant = {
 	},
 };
 
-// const sliderText = {
-// 	initial: {
-// 		x: "200%",
-// 	},
-// 	animate: {
-// 		x: "-300%",
-// 		transition: {
-// 			repeat: Infinity,
-// 			repeatType: "mirror",
-// 			duration: 1,
-// 		},
-// 	},
-// };
-
 const Hero = () => {
-	const items = ["About Me"];
-
 	return (
 		<div className="hero">
 			<motion.div
@@ -47,29 +31,11 @@ const Hero = () => {
 					Exceptional Web Solutions. Your vision, My Expertise
 				</h1>
 			</motion.div>
-			{/* <div className="scroll-down">
-				{items.map((item) => (
-					<div key={item}>
-						<a className="button" href={`#${item}`}>
-							<span>{item}</span>
-						</a>
-					</div>
-				))}
-				<div className="scroll"></div>
-			</div> */}
 			<div className="blob-container">
 				<div className="blob"></div>
 				<div className="blob-two"></div>
 				<div className="blob-three"></div>
 			</div>
-			{/* <div
-				className="sliding-text"
-				variants={sliderText}
-				initial="initial"
-				animate="animate"
-			>
-				WEB AND MOBILE DEVELOPER
-			</div> */}
 		</div>
 	);
 };

@@ -2,10 +2,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 42.5rem;
+	width: 62.5rem;
 	height: 25rem;
 	-webkit-font-smoothing: antialiased;
-	margin: 10rem auto;
+	margin: 0 auto;
+	// margin-bottom: 110rem;
 	perspective: 68.75rem;
 	transform-style: preserve-3d;
 	transform: rotateX(-10deg) rotateZ(-5deg);
@@ -25,8 +26,8 @@
 	height: 20rem;
 	width: 28rem;
 	z-index: -10;
-	background-color: black;
-	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+	background-color: rgb(50, 11, 11);
+	// box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .card-clr {
@@ -45,7 +46,56 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	// margin: 10rem auto;
 	background-color: red;
 	width: 20rem;
+}
+
+.calendar {
+	max-width: 40vw;
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 5rem;
+	grid-row-gap: 0px;
+	margin: 10rem 5rem;
+	max-width: 40rem;
+}
+
+.head {
+	width: 20rem;
+	height: 10rem;
+	font-size: 3rem;
+	font-family: "Stardom", sans-serif;
+}
+
+.description {
+	font-family: "Nunito", sans-serif;
+	font-weight: 300;
+	width: 30vw;
+	max-width: 45vw;
+	text-align: left;
+	font-size: 1.5rem;
+}
+
+// .image-container {
+// }
+
+.image-one {
+	border-radius: 0.5rem;
+	width: 30rem;
+	max-width: 30vw;
+	position: relative;
+}
+
+.image-two {
+	border-radius: 0.5rem;
+	width: 30rem;
+	max-width: 30vw;
+	position: relative;
+	bottom: 5rem;
+	left: 19rem;
+	z-index: -10;
 }

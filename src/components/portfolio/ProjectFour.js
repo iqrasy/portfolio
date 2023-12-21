@@ -1,28 +1,28 @@
 import React from "react";
-import styled from "styled-components";
 import { AiOutlineGithub } from "react-icons/ai";
 
 const ProjectFour = () => {
 	return (
 		<div id="portfolio">
-			<a
-				href="https://github.com/iqrasy/snake-game"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<AiOutlineGithub />
-			</a>
-			<div>
-				<h1>snake-game</h1>
+			<div className="main-container">
+				<div className="main-header">
+					<h1 className="head">PORTFOLIO</h1>
+					<p className="description">
+						This is my personal portfolio, built with React.js and designed to
+						showcase my work and skills!
+						<a
+							href="https://github.com/iqrasy/portfolio"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<AiOutlineGithub />
+						</a>
+					</p>
+				</div>
+				{/* <div className="image-container">
+					<img className="image-one" src={summary} />
+				</div> */}
 			</div>
-			<p>
-				I successfully developed a classic snake game using Python, leveraging
-				the power of Object-Oriented Programming (OOP) for efficient and
-				organized code. The game features a player-controlled snake that moves
-				around the screen. As the snake consumes food, it grows longer, and the
-				objective is to eat as much food as possible without colliding with the
-				boundaries of the game or its own tail.
-			</p>
 		</div>
 	);
 };

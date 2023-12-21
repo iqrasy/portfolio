@@ -1,12 +1,20 @@
 .first {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
+	justify-content: flex-start;
+	align-items: flex-start;
+	// margin: auto;
 	width: 80vh;
-	padding: 15rem 0 0 0;
+	padding: 5rem 0 0 5rem;
 	z-index: 2;
+	font-family: "Nunito", sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.1rem;
+
+	span {
+		color: #000000;
+		font-style: italic;
+	}
 }
 
 .about {
@@ -22,54 +30,48 @@
 .text {
 	font-size: 1.2rem;
 	color: #414141;
-	font-family: "Melodrama", serif;
-
-	span {
-		color: #000000;
-		font-style: italic;
-	}
 }
 
-@keyframes drawCircle {
-	0% {
-		stroke-dasharray: 0 285;
-	}
-	100% {
-		stroke-dasharray: 285 285;
-	}
-}
+// @keyframes drawCircle {
+// 	0% {
+// 		stroke-dasharray: 0 285;
+// 	}
+// 	100% {
+// 		stroke-dasharray: 285 285;
+// 	}
+// }
 
-.button-circle {
-	height: 15rem;
-	position: relative;
-	right: 30%;
-	color: grey;
-	cursor: pointer;
-}
+// .button-circle {
+// 	height: 15rem;
+// 	position: relative;
+// 	right: 30%;
+// 	color: grey;
+// 	cursor: pointer;
+// }
 
-.circle {
-	height: 100%;
-	position: absolute;
-	top: 7rem;
-	right: 1rem;
-	float: right;
+// .circle {
+// 	height: 100%;
+// 	position: absolute;
+// 	top: 7rem;
+// 	right: 1rem;
+// 	float: right;
 
-	&:hover {
-		animation: drawCircle 1s forwards;
-		color: black;
-	}
-}
+// 	&:hover {
+// 		animation: drawCircle 1s forwards;
+// 		color: black;
+// 	}
+// }
 
-.inner-circle {
-	height: 3rem;
-	position: absolute;
-	top: 14rem;
-	right: 7rem;
-	float: right;
-	color: black;
+// .inner-circle {
+// 	height: 3rem;
+// 	position: absolute;
+// 	top: 14rem;
+// 	right: 7rem;
+// 	float: right;
+// 	color: black;
 
-	&:hover {
-		color: black;
-		fill: black;
-	}
-}
+// 	&:hover {
+// 		color: black;
+// 		fill: black;
+// 	}
+// }

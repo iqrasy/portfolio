@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Draggable } from "gsap/Draggable";
@@ -15,55 +14,68 @@ const Projects = () => {
 		{ title: "Portfolio", link: "portfolio" },
 		{ title: "Metropole", link: "metropole" },
 		{ title: "Orbit", link: "orbit" },
-		{ title: "Travel Agency", Link: "travel" },
 	];
 
 	useEffect(() => {
-		var cards = gsap.utils.toArray(".creative-pro"),
-			dragDistancePerRotation = 1000,
-			radius = 500,
-			proxy = document.createElement("div"),
-			progressWrap = gsap.utils.wrap(0, 1),
-			spin = gsap.fromTo(
-				cards,
-				{
-					rotationY: (i) => (i * 360) / cards.length,
-				},
-				{
-					rotationY: "-=360",
-					duration: 25,
-					ease: "none",
-					repeat: -1,
-					transformOrigin: "50% 50% " + -radius + "px",
-				}
-			),
-			startProgress;
+		const cards = gsap.utils.toArray(".creative-pro");
+		const radius = 460;
+		const proxy = document.createElement("div");
 
-		Draggable.create(proxy, {
-			trigger: ".demoWrapper",
-			type: "x",
-			allowNativeTouchScrolling: true,
-			onPress() {
-				gsap.killTweensOf(spin);
-				spin.timeScale(0);
-				startProgress = spin.progress();
-			},
-			onDrag: updateRotation,
-			onThrowUpdate: updateRotation,
-			onRelease() {
-				if (!this.tween || !this.tween.isActive()) {
-					gsap.to(spin, { timeScale: 1, duration: 1 });
-				}
-			},
-			onThrowComplete() {
-				gsap.to(spin, { timeScale: 1, duration: 1 });
+		cards.forEach(function (element, index) {
+			gsap.set(element, {
+				rotationY: ((index - 1) * 360) / cards.length,
+				transformOrigin: "50% 50% " + -radius,
+			});
+		});
+
+		gsap.set(".demoWrapper", { yPercent: -100 });
+
+		let tl = gsap.to(".creative-pro", {
+			rotationY: "+=360",
+			duration: 1,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".creative-pro",
+				scrub: 0.2,
+				start: "-100px bottom",
+				end: "bottom top",
 			},
 		});
 
-		function updateRotation() {
-			let p = startProgress + (this.startX - this.x) / dragDistancePerRotation;
-			spin.progress(progressWrap(p));
+		gsap.to(".demoWrapper", {
+			yPercent: 100,
+			duration: 1,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".creative-pro",
+				scrub: 0.2,
+				start: "top bottom",
+				end: "bottom top",
+			},
+		});
+
+		function rotation() {
+			gsap.set(cards, { rotationY: "+=4", repeat: -1, ease: "none" });
 		}
+
+		Draggable.create(proxy, {
+			trigger: ".demoWrapper",
+			type: "rotation",
+			duration: 10,
+			inertia: true,
+			allowNativeTouchScrolling: true,
+			edgeResistance: 0.65,
+			onDrag: rotation,
+			onThrowUpdate: rotation,
+			onRelease() {
+				if (!this.tween || !this.tween.isActive()) {
+					gsap.to(tl, { timeScale: 1, duration: 1 });
+				}
+			},
+			onThrowComplete() {
+				gsap.to(tl, { timeScale: 1, duration: 1 });
+			},
+		});
 	}, []);
 
 	return (
@@ -79,6 +91,7 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
+
 			{/* <div className="project-text">
 				<h2>Double click on title to be get more info on project</h2>
 			</div> */}
@@ -87,13 +100,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-const Container = styled.div`
-	/* perspective: 2500px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
-
-	padding: 2rem; */
-`;

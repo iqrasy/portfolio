@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./about.scss";
 
 const About = () => {
-	const items = ["Portfolio"];
+	// const items = ["Portfolio"];
 
 	return (
 		<Div>
@@ -27,7 +27,7 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-			<div className="button-circle">
+			{/* <div className="button-circle">
 				{items.map((item) => (
 					<div key={item}>
 						<a href={`#${item}`}>
@@ -45,7 +45,7 @@ const About = () => {
 						</a>
 					</div>
 				))}
-			</div>
+			</div> */}
 			{/* <Tech> */}
 			{/* <div>
 					<p>Among the technologies I am familiar with and have used are:</p>

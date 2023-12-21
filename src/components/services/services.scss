@@ -1,0 +1,35 @@
+.first-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 10rem;
+	grid-row-gap: 0px;
+	margin: 10rem auto;
+	padding: 10rem 5rem;
+}
+
+.main-div {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: flex-start;
+	// align-items: flex-start;
+}
+
+.main-title {
+	font-family: "Stardom", sans-serif;
+	font-size: 3rem;
+}
+
+.service-pitch {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.5rem;
+	width: 40vw;
+}
+
+.service-container {
+	margin-top: 5rem;
+}
+
+.service {
+	font-family: "Nunito", sans-serif;
+}
