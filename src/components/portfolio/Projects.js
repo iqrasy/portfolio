@@ -40,6 +40,7 @@ const Projects = () => {
 				scrub: 0.2,
 				start: "top bottom",
 				end: "bottom top",
+				markers: true,
 			},
 		});
 
