@@ -26,6 +26,7 @@ const Main = styled.div`
 	padding: 1rem;
 	cursor: pointer;
 
+
 	a {
 		font-size: 1rem;
 		padding: 0 5rem;

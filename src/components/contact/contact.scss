@@ -14,18 +14,18 @@
 	font-family: "Nunito", sans-serif;
 	font-size: 1rem;
 	height: 100vh;
-	background-color: hsla(31, 32%, 87%, 1);
+	background-color: hsla(31, 56%, 92%, 1);
 	background-image: radial-gradient(
-			at 2% 98%,
-			hsla(5, 100%, 69%, 1) 0px,
+			at 95% 8%,
+			hsla(205, 12%, 10%, 0.71) 0%,
 			transparent 50%
 		),
-		radial-gradient(at 87% 85%, hsla(270, 0%, 90%, 1) 0px, transparent 50%),
-		radial-gradient(at 50% 51%, hsla(349, 100%, 87%, 1) 0px, transparent 50%),
-		radial-gradient(at 98% 2%, hsla(5, 100%, 69%, 1) 0px, transparent 50%),
-		radial-gradient(at 3% 49%, hsla(240, 66%, 94%, 1) 0px, transparent 50%),
-		radial-gradient(at 4% 3%, hsla(17, 0%, 90%, 1) 0px, transparent 50%),
-		radial-gradient(at 95% 51%, hsla(240, 66%, 94%, 1) 0px, transparent 50%);
+		radial-gradient(at 99% 1%, hsla(34, 5%, 23%, 1) 0%, transparent 50%),
+		radial-gradient(at 1% 2%, hsla(31, 55%, 92%, 1) 0%, transparent 50%),
+		radial-gradient(at 50% 52%, hsla(6, 0%, 37%, 0.15) 0%, transparent 50%),
+		radial-gradient(at 6% 95%, hsla(205, 12%, 10%, 0.71) 0%, transparent 50%),
+		radial-gradient(at 1% 99%, hsla(33, 5%, 23%, 1) 0%, transparent 50%),
+		radial-gradient(at 99% 98%, hsla(31, 55%, 92%, 1) 0%, transparent 50%);
 }
 
 .first-grid {

@@ -3,16 +3,10 @@ import About from "./about/About";
 import styled from "styled-components";
 import "./app.scss";
 import Hero from "./hero/Hero";
-import ProjectOne from "./portfolio/ProjectOne";
-import ProjectTwo from "./portfolio/ProjectTwo";
-import ProjectThree from "./portfolio/ProjectThree";
-import ProjectFour from "./portfolio/ProjectFour";
 import Services from "./services/Services";
 import Contact from "./contact/Contact";
 import Link from "./navigation/Link";
 import Projects from "./portfolio/Projects";
-import ProjectFive from "./portfolio/ProjectFive";
-import ProjectSix from "./portfolio/ProjectSix";
 
 const Home = () => {
 	return (
@@ -29,24 +23,6 @@ const Home = () => {
 				</section>
 				<section id="Portfolio">
 					<Projects />
-				</section>
-				<section id="Portfolio">
-					<ProjectOne />
-				</section>
-				<section id="Portfolio">
-					<ProjectTwo />
-				</section>
-				<section id="Portfolio">
-					<ProjectThree />
-				</section>
-				<section id="Portfolio">
-					<ProjectFour />
-				</section>
-				<section id="Portfolio">
-					<ProjectFive />
-				</section>{" "}
-				<section id="Portfolio">
-					<ProjectSix />
 				</section>
 				<section id="Services">
 					<Services />
@@ -73,4 +49,9 @@ const Side = styled.div`
 	transform: translateX(-50%);
 	opacity: 0.7;
 	width: 10%;
+	/* background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(12.5px);
+	-webkit-backdrop-filter: blur(12.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18); */
 `;

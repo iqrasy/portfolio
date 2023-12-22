@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "./about.scss";
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+	useEffect(() => {
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".first",
+				scrub: 0.2,
+				start: "top top",
+				end: "bottom top",
+				// markers: true,
+			},
+		});
+
+		tl.to(".first", {
+			y: -100, // Adjust this value for the desired movement
+			duration: 1,
+			ease: "none",
+		});
+	}, []);
 	return (
 		<Div>
 			<div className="first">
@@ -53,16 +73,16 @@ export default About;
 
 const Div = styled.div`
 	height: 100vh;
-	background-color: hsla(31, 32%, 87%, 1);
+	background-color: hsla(31, 56%, 92%, 1);
 	background-image: radial-gradient(
-			at 98% 98%,
-			hsla(5, 100%, 69%, 1) 0px,
+			at 5% 5%,
+			hsla(205, 12%, 10%, 0.71) 0%,
 			transparent 50%
 		),
-		radial-gradient(at 3% 88%, hsla(270, 0%, 90%, 1) 0px, transparent 50%),
-		radial-gradient(at 50% 51%, hsla(349, 100%, 87%, 1) 0px, transparent 50%),
-		radial-gradient(at 1% 2%, hsla(5, 100%, 69%, 1) 0px, transparent 50%),
-		radial-gradient(at 3% 49%, hsla(240, 66%, 94%, 1) 0px, transparent 50%),
-		radial-gradient(at 99% 2%, hsla(17, 0%, 90%, 1) 0px, transparent 50%),
-		radial-gradient(at 95% 51%, hsla(240, 66%, 94%, 1) 0px, transparent 50%);
+		radial-gradient(at 1% 1%, hsla(34, 5%, 23%, 1) 0%, transparent 50%),
+		radial-gradient(at 100% 1%, hsla(31, 55%, 92%, 1) 0%, transparent 50%),
+		radial-gradient(at 50% 52%, hsla(6, 0%, 37%, 0.15) 0%, transparent 50%),
+		radial-gradient(at 95% 93%, hsla(205, 12%, 10%, 0.71) 0%, transparent 50%),
+		radial-gradient(at 99% 99%, hsla(33, 5%, 23%, 1) 0%, transparent 50%),
+		radial-gradient(at 1% 99%, hsla(31, 55%, 92%, 1) 0%, transparent 50%);
 `;
