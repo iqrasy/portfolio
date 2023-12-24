@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineGithub } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import orbit from "./asset/orbit.png";
 
 const ProjectSix = () => {
@@ -26,7 +26,7 @@ const ProjectSix = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<AiOutlineGithub />
+							<MdOutlineArrowOutward />
 						</a>
 					</p>
 				</div>

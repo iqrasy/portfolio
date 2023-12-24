@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineGithub } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 import landingPage from "./asset/LandingPage.png";
 import mainPage from "./asset/mainPage.png";
 
@@ -10,8 +11,9 @@ const ProjectOne = () => {
 			<div id="calendar">
 				<div className="main-container">
 					<h1 className="head">PERSONAL-CALENDAR</h1>
-					<img className="image-one" src={mainPage} />
-					<img className="image-two" src={landingPage} />
+					<div className="image-container">
+						<img className="image-one" src={mainPage} />
+					</div>
 					<p className="description">
 						I've developed my own version of a calendar where you can plan out
 						your day, week, and year. The Modern Calendar App is a feature-rich,
@@ -24,7 +26,7 @@ const ProjectOne = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<AiOutlineGithub />
+							<MdOutlineArrowOutward />
 						</a>
 					</p>
 				</div>

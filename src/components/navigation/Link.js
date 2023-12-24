@@ -1,15 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 const Link = () => {
-	const items = ["Homepage", "About ", "Portfolio", "Services", "Contact"];
+	const items = ["Homepage", "About ", "Portfolio", "Contact"];
 	return (
 		<Main>
-			{items.map((item) => (
-				<div key={item}>
-					<a href={`#${item}`}>{item}</a>
-				</div>
-			))}
+			<nav>
+				{items.map((item) => (
+					<div key={item}>
+						<RouterLink to={`/${item.toLowerCase()}`}>
+							{item.split("").map((char, index) => (
+								<span key={index}>{char}</span>
+							))}
+						</RouterLink>
+					</div>
+				))}
+			</nav>
 		</Main>
 	);
 };
@@ -17,18 +24,25 @@ const Link = () => {
 export default Link;
 
 const Main = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
 	color: black;
 	margin: auto;
-	padding: 1rem;
+	/* padding: 1rem; */
 	cursor: pointer;
 
-
 	a {
+		transition: transform 0.3s ease;
 		font-size: 1rem;
-		padding: 0 5rem;
+		padding: 1rem 0;
+		display: block;
+
+		&:hover {
+			transform: translateX(5px);
+		}
+	}
+
+	span {
+		display: block;
+		transform: rotate(90deg);
+		transform-origin: center;
 	}
 `;

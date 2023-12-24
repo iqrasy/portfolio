@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineGithub } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import chat from "./asset/chat.png";
 import first from "./asset/First.png";
 
@@ -24,7 +24,7 @@ const ProjectThree = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<AiOutlineGithub />
+							<MdOutlineArrowOutward />
 						</a>
 					</p>
 				</div>

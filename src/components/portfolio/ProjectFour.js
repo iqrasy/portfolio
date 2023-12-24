@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineGithub } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import portfolio from "./asset/portfolio.png";
 
 const ProjectFour = () => {
 	return (
@@ -8,16 +9,18 @@ const ProjectFour = () => {
 			<div id="portfolio">
 				<div className="main-container">
 					<h1 className="head">PORTFOLIO</h1>
-					{/* <img className="image-one" src={summary} />*/}
+					<div className="image-container">
+						<img className="image-one" src={portfolio} />
+					</div>
 					<p className="description">
-						This is my personal portfolio, built with React.js and designed to
-						showcase my work and skills!
+						This is my personal portfolio, built with React.js, GSAP animations
+						and framer motion and designed to showcase my work and skills!
 						<a
 							href="https://github.com/iqrasy/portfolio"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<AiOutlineGithub />
+							<MdOutlineArrowOutward />
 						</a>
 					</p>
 				</div>

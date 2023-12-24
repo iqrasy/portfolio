@@ -2,10 +2,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 62.5rem;
+	width: 62rem;
 	height: 25rem;
+	margin: auto;
 	-webkit-font-smoothing: antialiased;
-	margin: 0 auto;
 	perspective: 68.75rem;
 	transform-style: preserve-3d;
 	transform: rotateX(-10deg) rotateZ(-5deg);
@@ -13,17 +13,17 @@
 
 .box {
 	position: absolute;
-	width: 15.25rem;
-	height: 11.25rem;
 	border-radius: 1rem;
 	display: inline-block;
 	overflow: hidden;
 }
 
 .creative-pro {
-	height: 10rem;
-	width: 15rem;
+	height: 15rem;
+	width: 25rem;
+	cursor: pointer;
 	z-index: -10;
+	text-align: center;
 	border: solid rgba(0, 0, 0, 0.075) 1px;
 	background: rgba(230, 230, 250, 0.05);
 	backdrop-filter: blur(5rem);
@@ -43,6 +43,41 @@
 	color: black;
 	opacity: 0.7;
 	font-family: "Nunito", sans-serif;
+
+	&:hover {
+		color: red;
+	}
+}
+
+.navigate {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: white;
+	letter-spacing: 0.3rem;
+	margin-top: 3rem;
+	display: block;
+	transform: rotate(-90deg);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		transform: translateX(5px) rotate(-90deg);
+	}
+}
+
+.main-head-container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-head {
+	color: white;
+	font-family: "Stardom", sans-serif;
+	text-align: center;
 }
 
 .project-text {
@@ -61,10 +96,11 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-	// grid-column-gap: 5rem;
-	grid-row-gap: 0px;
-	// margin: 0rem 10rem;
-	max-width: 40rem;
+	align-items: flex-start;
+	justify-content: center;
+	max-width: 45vw;
+	margin-top: 15rem;
+	// border: solid green 1px;
 }
 
 .head {
@@ -77,27 +113,32 @@
 .description {
 	font-family: "Nunito", sans-serif;
 	font-weight: 300;
-	width: 30vw;
-	padding: 1rem;
-	max-width: 45vw;
+	width: 40vw;
+	padding-top: 1rem;
+	max-width: 35vw;
 	text-align: left;
 	font-size: 1.5rem;
+}
+
+.image-container {
+	// border: solid green 1px;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: row;
+	max-width: 45vw;
+	min-width: 30vw;
 }
 
 .image-one {
 	border-radius: 0.5rem;
 	width: 30rem;
-	max-width: 30vw;
-	// position: relative;
+	max-width: 45vw;
 	z-index: 10;
 }
 
 .image-two {
 	border-radius: 0.5rem;
-	width: 30rem;
+	width: 20rem;
 	max-width: 30vw;
-	// position: relative;
-	// bottom: 5rem;
-	// right: 20rem;
 	z-index: 1;
 }

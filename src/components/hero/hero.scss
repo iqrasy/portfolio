@@ -1,29 +1,20 @@
 .hero {
 	height: 100vh;
-	background-color: hsla(31, 56%, 92%, 1);
-	background-image: radial-gradient(
-			at 95% 8%,
-			hsla(205, 12%, 10%, 0.71) 0%,
-			transparent 50%
-		),
-		radial-gradient(at 99% 1%, hsla(34, 5%, 23%, 1) 0%, transparent 50%),
-		radial-gradient(at 1% 2%, hsla(31, 55%, 92%, 1) 0%, transparent 50%),
-		radial-gradient(at 50% 52%, hsla(6, 0%, 37%, 0.15) 0%, transparent 50%),
-		radial-gradient(at 6% 95%, hsla(205, 12%, 10%, 0.71) 0%, transparent 50%),
-		radial-gradient(at 1% 99%, hsla(33, 5%, 23%, 1) 0%, transparent 50%),
-		radial-gradient(at 99% 98%, hsla(31, 55%, 92%, 1) 0%, transparent 50%);
+	// background-color: hsla(31, 56%, 92%, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pitch {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	max-width: 70rem;
-	height: 100%;
-	margin: auto;
-	padding-left: 2rem;
-	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 10px;
+	max-width: 80vw;
+	width: 80vw;
+	margin: 0 auto;
 
 	h1 {
 		width: 45rem;
@@ -43,52 +34,43 @@
 	}
 }
 
-@keyframes animateCircles {
-	0% {
-		stroke-dasharray: 0 285;
-	}
-	100% {
-		stroke-dasharray: 285 285;
-	}
-}
+// .blob {
+// 	position: absolute;
+// 	top: 30%;
+// 	left: 10%;
+// 	width: 20rem;
+// 	height: 20rem;
+// 	border-radius: 50%;
+// 	z-index: -10;
+// 	background: rgb(255, 77, 77);
+// 	filter: blur(105px);
+// }
 
-.blob {
-	position: absolute;
-	top: 30%;
-	left: 10%;
-	width: 20rem;
-	height: 20rem;
-	border-radius: 50%;
-	z-index: -10;
-	background: rgb(255, 77, 77);
-	filter: blur(105px);
-}
+// .blob-two {
+// 	position: absolute;
+// 	top: 24%;
+// 	left: 6%;
+// 	width: 20rem;
+// 	height: 20rem;
+// 	border-radius: 50%;
+// 	z-index: -50;
+// 	background: rgb(235, 134, 136);
+// 	filter: blur(55px);
+// }
 
-.blob-two {
-	position: absolute;
-	top: 24%;
-	left: 6%;
-	width: 20rem;
-	height: 20rem;
-	border-radius: 50%;
-	z-index: -50;
-	background: rgb(235, 134, 136);
-	filter: blur(55px);
-}
-
-.blob-three {
-	position: absolute;
-	top: 35%;
-	left: 15%;
-	width: 20rem;
-	height: 23rem;
-	border-radius: 50%;
-	z-index: -50;
-	background: radial-gradient(
-		circle,
-		rgba(255, 148, 77, 1) 50%,
-		rgba(255, 204, 102, 1) 20%,
-		rgba(255, 219, 77, 1) 40%
-	);
-	filter: blur(65px);
-}
+// .blob-three {
+// 	position: absolute;
+// 	top: 35%;
+// 	left: 15%;
+// 	width: 20rem;
+// 	height: 23rem;
+// 	border-radius: 50%;
+// 	z-index: -50;
+// 	background: radial-gradient(
+// 		circle,
+// 		rgba(255, 148, 77, 1) 50%,
+// 		rgba(255, 204, 102, 1) 20%,
+// 		rgba(255, 219, 77, 1) 40%
+// 	);
+// 	filter: blur(65px);
+// }

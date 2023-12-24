@@ -6,18 +6,18 @@
 	grid-row-gap: 0px;
 	padding: 10rem 5rem;
 	height: 100vh;
-	background-color: hsla(31, 56%, 92%, 1);
-	background-image: radial-gradient(
-			at 5% 5%,
-			hsla(205, 12%, 10%, 0.71) 0%,
-			transparent 50%
-		),
-		radial-gradient(at 1% 1%, hsla(34, 5%, 23%, 1) 0%, transparent 50%),
-		radial-gradient(at 100% 1%, hsla(31, 55%, 92%, 1) 0%, transparent 50%),
-		radial-gradient(at 50% 52%, hsla(6, 0%, 37%, 0.15) 0%, transparent 50%),
-		radial-gradient(at 95% 93%, hsla(205, 12%, 10%, 0.71) 0%, transparent 50%),
-		radial-gradient(at 99% 99%, hsla(33, 5%, 23%, 1) 0%, transparent 50%),
-		radial-gradient(at 1% 99%, hsla(31, 55%, 92%, 1) 0%, transparent 50%);
+	// background-color: hsla(31, 56%, 92%, 1);
+	// background-image: radial-gradient(
+	// 		at 96% 2%,
+	// 		hsla(23, 9%, 30%, 1) 0px,
+	// 		transparent 50%
+	// 	),
+	// 	radial-gradient(at 99% 2%, hsla(33, 5%, 23%, 1) 0px, transparent 50%),
+	// 	radial-gradient(at 30% 1%, hsla(36, 15%, 76%, 1) 0px, transparent 50%),
+	// 	radial-gradient(at 4% 98%, hsla(23, 9%, 30%, 1) 0px, transparent 50%),
+	// 	radial-gradient(at 49% 52%, hsla(36, 15%, 76%, 1) 0px, transparent 50%),
+	// 	radial-gradient(at 1% 98%, hsla(33, 5%, 23%, 1) 0px, transparent 50%),
+	// 	radial-gradient(at 71% 99%, hsla(36, 15%, 76%, 1) 0px, transparent 50%);
 }
 
 .main-div {
