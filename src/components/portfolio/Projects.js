@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Draggable } from "gsap/Draggable";
+import { motion, useAnimation } from "framer-motion";
 import "./portfolio.scss";
 import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
@@ -10,97 +11,82 @@ import ProjectThree from "./ProjectThree";
 import ProjectFour from "./ProjectFour";
 import ProjectFive from "./ProjectFive";
 import ProjectSix from "./ProjectSix";
-import { useNavigate } from "react-router-dom";
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger, Draggable);
+const textVariant = {
+	initial: {
+		opacity: 0,
+		x: 50,
+	},
+	animate: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 2,
+		},
+	},
+};
 
 const Projects = () => {
 	const navigate = useNavigate();
 	const [selectedProject, setSelectedProject] = useState(null);
 	const cardData = [
-		{ title: "Personal Calendar", link: "calendar" },
-		{ title: "AI article summarizer", link: "article-summarizer" },
-		{ title: "Chat-GPT Clone", link: "chatgpt clone" },
-		{ title: "Portfolio", link: "portfolio" },
-		{ title: "Metropole", link: "metropole" },
-		{ title: "Orbit", link: "orbit" },
+		{ title: "PERSONAL CALENDAR", link: "calendar", id: "1" },
+		{ title: "AI ARTICLE SUMMARIZER", link: "article-summarizer", id: "2" },
+		{ title: "CHAT-GPT CLONE", link: "chatgpt clone", id: "3" },
+		{ title: "PORTFOLIO", link: "portfolio", id: "4" },
+		{ title: "MÉTROPOLE", link: "metropole", id: "5" },
+		{ title: "ORBIT", link: "orbit", id: "6" },
 	];
 
+	const controls = useAnimation();
+
 	useEffect(() => {
-		const cards = gsap.utils.toArray(".creative-pro");
-		const radius = 360;
-		const proxy = document.createElement("div");
-
-		cards.forEach(function (element, index) {
-			gsap.set(element, {
-				rotationY: ((index - 1) * 360) / cards.length,
-				transformOrigin: "50% 50% " + -radius,
-			});
-		});
-
-		gsap.set(".demoWrapper", { yPercent: 0 });
-
-		let tl = gsap.to(".creative-pro", {
-			rotationY: "+=360",
+		gsap.from(".box", {
+			opacity: 0,
+			y: 50,
 			duration: 1,
-			ease: "none",
 			scrollTrigger: {
-				trigger: ".creative-pro",
-				scrub: 0.2,
-				start: "top bottom",
-				end: "bottom top",
+				trigger: ".box",
+				start: "top 80%",
+				end: "top 50%",
+				toggleActions: "play none none reverse",
 			},
 		});
 
-		gsap.to(".demoWrapper", {
-			yPercent: 0,
+		gsap.from(".first-div, .projects", {
+			opacity: 0,
+			y: 0,
+			stagger: 0.1,
 			duration: 1,
-			ease: "none",
 			scrollTrigger: {
-				trigger: ".creative-pro",
-				scrub: 0.2,
-				start: "top center",
-				end: "bottom top",
+				trigger: ".box",
+				start: "top 80%",
+				end: "top 50%",
+				toggleActions: "play none none reverse",
 			},
 		});
 
-		function rotation() {
-			gsap.set(cards, { rotationY: "+=2", repeat: -0.1, ease: "none" });
-		}
+		controls.start({ opacity: 1, x: 0 });
 
-		Draggable.create(proxy, {
-			trigger: ".demoWrapper",
-			type: "rotation",
-			duration: 10,
-			inertia: true,
-			allowNativeTouchScrolling: true,
-			edgeResistance: 0.65,
-			onDrag: rotation,
-			onThrowUpdate: rotation,
-			onRelease() {
-				if (!this.tween || !this.tween.isActive()) {
-					gsap.to(tl, { timeScale: 1, duration: 1 });
-				}
-			},
-			onThrowComplete() {
-				gsap.to(tl, { timeScale: 1, duration: 1 });
-			},
-		});
-	}, []);
+		return () => {
+			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+		};
+	}, [controls]);
 
 	const handleProjects = (action) => {
 		switch (action) {
-			case "Personal Calendar":
+			case "PERSONAL CALENDAR":
 				return <ProjectOne />;
-			case "AI article summarizer":
+			case "AI ARTICLE SUMMARIZER":
 				return <ProjectTwo />;
-			case "Chat-GPT Clone":
+			case "CHAT-GPT CLONE":
 				return <ProjectThree />;
-			case "Portfolio":
+			case "PORTFOLIO":
 				return <ProjectFour />;
-			case "Metropole":
+			case "MÉTROPOLE":
 				return <ProjectFive />;
-			case "Orbit":
+			case "ORBIT":
 				return <ProjectSix />;
 			default:
 				return <p>Click me</p>;
@@ -112,84 +98,56 @@ const Projects = () => {
 		setSelectedProject(title);
 		gsap.timeline().to(el, {
 			y: 0,
-			duration: 0.2,
+			duration: 0.5,
 			ease: "power2.inOut",
 		});
 	};
 
 	const handleCloseClick = () => {
 		const el = document.querySelector(".project-container");
-		setSelectedProject(null);
-		gsap.to(el, {
-			transform: "translateY(-100%)",
-			duration: 0.2,
+
+		gsap.timeline().to(el, {
+			yPercent: 4000,
+			duration: 2,
 			ease: "power2.inOut",
-			y: -100,
+			onComplete: function () {
+				setSelectedProject("");
+			},
 		});
 	};
 
-	useEffect(() => {
-		const el = document.querySelector(".project-container");
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				start: "top bottom",
-				end: "bottom top",
-				toggleActions: "play none none reverse",
-				scrub: true,
-			},
-		});
-
-		tl.to(el, {
-			yPercent: -100,
-			ease: "power2.inOut",
-		});
-	}, []);
-
 	return (
 		<>
-			<button className="navigate" onClick={() => navigate("/")}>
-				HOME
-			</button>
-			<div className="main-head-container">
-				<h1 className="main-head">SCROLL</h1>
-			</div>
-			<Div className="firs-cont">
-				<div className="demoWrapper">
+			<div className="firs-cont">
+				<div className="first-div">
 					{cardData.map((card, index) => (
-						<div
-							key={index}
-							className="card box creative-pro"
-							onClick={() => handleProjectClick(card.title)}
-						>
-							<div className="card-body">
-								<p className="card-clr">{card.title}</p>
-							</div>
+						<div key={index} className="box">
+							<span className="num"> {card.id}</span>
+							<p
+								onClick={() => handleProjectClick(card.title)}
+								className="projects"
+							>
+								{card.title}
+							</p>
 						</div>
 					))}
 				</div>
 				{selectedProject && (
 					<ProjectContainer className="project-container">
 						<div>
-							<button className="close" onClick={handleCloseClick}>
-								Close
+							<button className="close close-btn" onClick={handleCloseClick}>
+								CLOSE
 							</button>
 							{handleProjects(selectedProject)}
 						</div>
 					</ProjectContainer>
 				)}
-			</Div>
+			</div>
 		</>
 	);
 };
 
 export default Projects;
-
-const Div = styled.div`
-	display: flex;
-	height: 100vh;
-	margin-bottom: 40rem;
-`;
 
 const ProjectContainer = styled.div`
 	position: fixed;
@@ -204,23 +162,28 @@ const ProjectContainer = styled.div`
 	color: white;
 	background-color: #252422;
 	z-index: 10;
-	transform: translateY(100%);
-	transition: transform 0.5s ease-in-out;
+	transform: translateY(100vh);
+	/* transition: transform 0.2s ease-in-out; */
 	overflow-y: auto;
 
 	.close {
 		position: absolute;
 		top: 5rem;
-		color: white;
-		border: none;
+		right: 3rem;
+		color: #adb5bd;
+		border: solid rgba(255, 255, 255, 0.05) 1px;
 		outline: none;
 		z-index: 100;
 		cursor: pointer;
-		background: rgba(255, 255, 255, 0.05);
+		background: transparent;
 		backdrop-filter: blur(12.5px);
 		-webkit-backdrop-filter: blur(12.5px);
-		width: 7rem;
-		height: 3rem;
+		width: 12vh;
+		height: 5vh;
 		border-radius: 2rem;
+
+		&:hover {
+			/* background-color: red; */
+		}
 	}
 `;

@@ -2,20 +2,19 @@ import React from "react";
 import GlobalStyles from "./Globalstyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import About from "./about/About";
-import Projects from "./portfolio/Projects";
-import Contact from "./contact/Contact";
 
 const App = () => {
 	return (
 		<>
 			<BrowserRouter>
 				<GlobalStyles />
+				<div className="circles">
+					<div className="circle circle1"></div>
+					<div className="circle circle2"></div>
+					<div className="circle circle3"></div>
+				</div>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/portfolio" element={<Projects />} />
-					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
 		</>

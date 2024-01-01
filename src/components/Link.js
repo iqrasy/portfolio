@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
 
 const Link = () => {
-	const items = ["Homepage", "About ", "Portfolio", "Contact"];
+	const items = ["Homepage", "About", "Portfolio", "Contact"];
+
 	return (
 		<Main>
 			<nav>
 				{items.map((item) => (
 					<div key={item}>
-						<RouterLink to={`/${item.toLowerCase()}`}>
+						<a href={`/#${item}`}>
 							{item.split("").map((char, index) => (
 								<span key={index}>{char}</span>
 							))}
-						</RouterLink>
+						</a>
 					</div>
 				))}
 			</nav>
@@ -24,9 +24,7 @@ const Link = () => {
 export default Link;
 
 const Main = styled.div`
-	color: black;
 	margin: auto;
-	/* padding: 1rem; */
 	cursor: pointer;
 
 	a {
@@ -34,6 +32,7 @@ const Main = styled.div`
 		font-size: 1rem;
 		padding: 1rem 0;
 		display: block;
+		text-decoration: none;
 
 		&:hover {
 			transform: translateX(5px);

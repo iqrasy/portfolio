@@ -14,8 +14,10 @@
 		"react-icons": "^4.9.0",
 		"react-router-dom": "^6.11.2",
 		"react-scripts": "^5.0.1",
+		"react-scroll": "^1.9.0",
 		"sass": "^1.69.5",
-		"styled-components": "5.3.11"
+		"styled-components": "5.3.11",
+		"three": "^0.160.0"
 	},
 	"resolutions": {
 		"react-error-overlay": "6.0.9"
