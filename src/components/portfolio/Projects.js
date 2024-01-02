@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { gsap } from "gsap";
@@ -94,13 +94,15 @@ const Projects = () => {
 	};
 
 	const handleProjectClick = (title) => {
-		const el = document.querySelector(".project-container");
 		setSelectedProject(title);
-		gsap.timeline().to(el, {
-			y: 0,
-			duration: 0.5,
-			ease: "power2.inOut",
-		});
+		setTimeout(() => {
+			const el = document.querySelector(".project-container");
+			gsap.timeline().to(el, {
+				y: 0,
+				duration: 0.5,
+				ease: "power2.inOut",
+			});
+		}, 0);
 	};
 
 	const handleCloseClick = () => {
@@ -118,17 +120,16 @@ const Projects = () => {
 
 	return (
 		<>
-			<div className="firs-cont">
+			<Div className="firs-cont">
 				<div className="first-div">
 					{cardData.map((card, index) => (
-						<div key={index} className="box">
+						<div
+							key={index}
+							className="box"
+							onClick={() => handleProjectClick(card.title)}
+						>
 							<span className="num"> {card.id}</span>
-							<p
-								onClick={() => handleProjectClick(card.title)}
-								className="projects"
-							>
-								{card.title}
-							</p>
+							<p className="projects">{card.title}</p>
 						</div>
 					))}
 				</div>
@@ -142,12 +143,40 @@ const Projects = () => {
 						</div>
 					</ProjectContainer>
 				)}
-			</div>
+			</Div>
 		</>
 	);
 };
 
 export default Projects;
+
+const Div = styled.div`
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 5rem;
+	z-index: 10;
+
+	.box {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.projects {
+		transition: transform 0.5s ease;
+		font-size: 6vh;
+		z-index: 10;
+		cursor: pointer;
+		padding-left: 1rem;
+
+		&:hover {
+			font-style: italic;
+			transform: translateX(1px);
+		}
+	}
+`;
 
 const ProjectContainer = styled.div`
 	position: fixed;
@@ -160,10 +189,10 @@ const ProjectContainer = styled.div`
 	height: 100vh;
 	width: 100vw;
 	color: white;
-	background-color: #252422;
+	background-color: #000000;
 	z-index: 10;
 	transform: translateY(100vh);
-	/* transition: transform 0.2s ease-in-out; */
+	transition: transform 0.2s ease-in-out;
 	overflow-y: auto;
 
 	.close {
@@ -181,9 +210,11 @@ const ProjectContainer = styled.div`
 		width: 12vh;
 		height: 5vh;
 		border-radius: 2rem;
+		box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+		transition: box-shadow 0.3s ease-in-out;
 
 		&:hover {
-			/* background-color: red; */
+			box-shadow: 0 0 50px 5px #cdb4db;
 		}
 	}
 `;

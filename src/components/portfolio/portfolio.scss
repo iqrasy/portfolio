@@ -1,35 +1,8 @@
-.firs-cont {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin-left: 5rem;
-}
-
-.box {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.projects {
-	transition: transform 0.5s ease;
-	font-size: 6vh;
-	z-index: 10;
-	cursor: pointer;
-	padding-left: 1rem;
-
-	&:hover {
-		font-style: italic;
-		transform: translateX(1px);
-	}
-}
-
 .main-head-container {
 	height: 100vh;
-	// display: flex;
-	// align-items: center;
-	// justify-content: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 2rem;
 }
 
@@ -52,16 +25,18 @@
 
 .main-container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-column-gap: 2rem;
-	grid-row-gap: 0px;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
 	align-items: flex-start;
 	justify-content: center;
 	margin-top: 20rem;
+	// border: solid green 1px;
 }
 
 .head {
+	margin-left: 3rem;
+	grid-area: 1 / 1 / 2 / 2;
 	font-size: 3rem;
 	font-family: "Stardom", sans-serif;
 }
@@ -69,54 +44,70 @@
 .description {
 	font-family: "Nunito", sans-serif;
 	font-weight: 300;
-	width: 40vw;
+	width: 60vw;
 	padding-top: 1rem;
-	max-width: 35vw;
+	max-width: 60vw;
 	text-align: left;
 	font-size: 1.2rem;
 }
 
 .image-container {
-	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: 2rem;
-	grid-area: 2;
-	// max-width: 40vw;
-	border: solid green 1px;
-	// min-width: 30vw;
+	grid-area: 2 / 1 / 3 / 3;
+	min-width: 30vw;
 }
 
 .image-one {
 	border-radius: 0.5rem;
-	width: 80vw;
-	// max-width: 55vw;
+	width: 90vw;
+	max-width: 100vh;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
 	z-index: 10;
 }
 
 .image-two {
 	border-radius: 0.5rem;
-	width: 80vw;
-	// max-width: 55vw;
+	width: 90vw;
+	max-width: 100vh;
 	z-index: 1;
 }
 
 .project-text {
 	position: relative;
-	grid-area:  4 ; /* Adjust the grid area based on your layout */
+	grid-area: 1 / 2 / 2 / 3;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	margin-top: -6rem; /* Adjust the margin to position it precisely */
 }
 
 .link {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	position: relative;
+	top: 7.9rem;
+	right: 13.9rem;
 	cursor: pointer;
 }
 
 .circle {
-	width: 7rem;
-	height: 8rem;
 	position: relative;
+	right: 10rem;
+	top: 5rem;
+	width: 12vh;
+	height: 12vh;
+
+	&:hover {
+		animation: drawCircle 1s linear forwards;
+	}
+}
+
+@keyframes drawCircle {
+	0% {
+		stroke-dasharray: 0;
+	}
+	100% {
+		stroke-dasharray: 450;
+	}
 }

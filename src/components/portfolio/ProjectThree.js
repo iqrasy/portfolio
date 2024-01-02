@@ -32,27 +32,11 @@ const ProjectThree = () => {
 								cx="50"
 								cy="50"
 								r="45"
-								stroke="#6c757d"
-								strokeWidth="0.2"
 								fill="transparent"
+								stroke="#6c757d"
+								strokeWidth="1"
 							/>
-							<a
-								className="link"
-								href="https://github.com/iqrasy/ChatGPT-clone"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<MdOutlineArrowOutward />
-							</a>
 						</svg>
-					</div>
-					{/* <svg
-						className="circle"
-						width="50%"
-						height="50%"
-						viewBox="0 0 100 100"
-						xmlns="http://www.w3.org/2000/svg"
-					>
 						<a
 							className="link"
 							href="https://github.com/iqrasy/ChatGPT-clone"
@@ -60,16 +44,8 @@ const ProjectThree = () => {
 							rel="noopener noreferrer"
 						>
 							<MdOutlineArrowOutward />
-							<circle
-								cx="50"
-								cy="50"
-								r="45"
-								stroke="#6c757d"
-								strokeWidth="0.2"
-								fill="transparent"
-							/>
 						</a>
-					</svg> */}
+					</div>
 					<div className="image-container">
 						<img className="image-one" src={chat} />
 						<img className="image-two" src={first} />
@@ -84,9 +60,4 @@ export default ProjectThree;
 
 const Div = styled.div`
 	height: 100vh;
-
-	a {
-		position: absolute;
-		top: 5rem;
-	}
 `;
