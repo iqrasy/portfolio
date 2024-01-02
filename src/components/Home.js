@@ -5,13 +5,13 @@ import Contact from "./Contact";
 import styled from "styled-components";
 import "./app.scss";
 import Hero from "./Hero";
-import Link from "./Link";
+import Sidebar from "./Sidebar";
 
 const Home = () => {
 	return (
 		<Main>
 			<Side>
-				<Link />
+				<Sidebar />
 			</Side>
 			<section id="Homepage">
 				<Hero />
@@ -37,6 +37,7 @@ const Main = styled.div`
 `;
 
 const Side = styled.div`
+z-index: 20;
 	width: 15%;
 	max-width: 5rem;
 	height: 100vh;

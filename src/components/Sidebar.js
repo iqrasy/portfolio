@@ -1,86 +1,47 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Links from "./Links";
 
-const Sidebar = () => {
+const Link = () => {
+	const items = ["Homepage", "About", "Portfolio", "Contact"];
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Iqra Imran Syed.pdf";
-    link.download = "Iqra Imran Syed.pdf";
-    link.click();
-  }
-
-  return (
-    <div>
-      <Container>
-        <Div>
-          <Links />
-        </Div>
-      </Container>
-          <Button onClick={handleDownload}>
-          Download Resume
-        </Button>
-    </div>
-  );
+	return (
+		<Main>
+			<nav>
+				{items.map((item) => (
+					<div key={item}>
+						<a href={`/#${item}`}>
+							{item.split("").map((char, index) => (
+								<span key={index}>{char}</span>
+							))}
+						</a>
+					</div>
+				))}
+			</nav>
+		</Main>
+	);
 };
 
-export default Sidebar;
+export default Link;
 
-const Div = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 12%;
-  width: 5rem;
+const Main = styled.div`
+	margin: auto;
+	cursor: pointer;
 
-  a {
-    color: #bdb2ff;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
+	a {
+		transition: transform 0.3s ease;
+		font-size: 1rem;
+		padding: 1rem 0;
+		display: block;
+		text-decoration: none;
 
-  @media only screen and (max-width: 480px) {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 12%;
-    width: 5rem;
-    z-index: 10;
+		&:hover {
+			transform: translateX(5px);
+		}
+	}
 
-    a {
-      color: #bdb2ff;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-  }
+	span {
+		display: block;
+		transform: rotate(90deg);
+		transform-origin: center;
+	}
 `;
-
-const Button = styled.button`
-  font-family: 'Nanum Gothic Coding', monospace;
-  background-color: transparent;
-  border: solid 1px #bdb2ff;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 7%;
-  width: 10rem;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #adb5bd;
-  transition: background-color 0.5s ease-in; 
-
-&:hover {
-  background-color: #ff7f50; 
-  border: none;
-  background-color: #bdb2ff;
-  color: black;
-}
-
-@media only screen and (max-width: 480px){
-  display: none;
-}
-`

@@ -123,13 +123,15 @@ const Projects = () => {
 			<Div className="firs-cont">
 				<div className="first-div">
 					{cardData.map((card, index) => (
-						<div
-							key={index}
-							className="box"
-							onClick={() => handleProjectClick(card.title)}
-						>
+						<div key={index} className="box">
 							<span className="num"> {card.id}</span>
-							<p className="projects">{card.title}</p>
+
+							<p
+								className="projects"
+								onClick={() => handleProjectClick(card.title)}
+							>
+								{card.title}
+							</p>
 						</div>
 					))}
 				</div>
@@ -156,7 +158,6 @@ const Div = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	margin-left: 5rem;
-	z-index: 10;
 
 	.box {
 		display: flex;
@@ -167,7 +168,7 @@ const Div = styled.div`
 	.projects {
 		transition: transform 0.5s ease;
 		font-size: 6vh;
-		z-index: 10;
+		/* z-index: 10; */
 		cursor: pointer;
 		padding-left: 1rem;
 

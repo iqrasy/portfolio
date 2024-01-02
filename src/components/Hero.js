@@ -37,7 +37,6 @@ const Hero = () => {
 						}}
 					>
 						YOUR VISION, MY EXPERTISE
-						{/* Your vision, My Expertise */}
 					</h1>
 				</h1>
 			</motion.div>
