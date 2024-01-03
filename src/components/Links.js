@@ -58,7 +58,7 @@ const Div = styled.div`
 		font-family: "Stardom", sans-serif;
 		font-size: 1rem;
 		cursor: pointer;
-		color: #eaded2;
+		color: grey;
 		padding-top: 1rem;
 		transition: transform 0.3s ease;
 
@@ -88,7 +88,6 @@ const Div = styled.div`
 	}
 
 	@media only screen and (max-width: 480px) {
-		
 		left: 20%;
 		.social-links {
 			width: 4rem;

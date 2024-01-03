@@ -77,13 +77,13 @@ const About = () => {
 					infinite possibilities that technology offers. Which eventually led me
 					to pursue a career in development.
 				</p>
-				<p className="text">
+				{/* <p className="text">
 					As I look back on how far I've come, I'm not just a developer; I'm a
 					storyteller, using the language of code to bring narratives to life.
 					The joy of solving problems, the thrill of mastering new technologies,
 					and the satisfaction of creating something meaningful — these are the
 					elements that fuel my enthusiasm for what I do.
-				</p>
+				</p> */}
 				<div>
 					<h2 className="experience">EXPERIENCE</h2>
 					<ul className="skills">

@@ -46,6 +46,6 @@ const Main = styled.div`
 	}
 
 	@media only screen and (max-width: 480px) {
-		/* display: none; */
+		display: none;
 	}
 `;

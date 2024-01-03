@@ -27,6 +27,7 @@ const FooterContainer = styled.footer`
 	width: 100%;
 	text-align: left;
 	font-family: "Nunito", sans-serif;
+	color: grey;
 
 	.footer-container {
 		font-size: 0.7rem;
