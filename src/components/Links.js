@@ -86,4 +86,12 @@ const Div = styled.div`
 			transform: translateX(5px);
 		}
 	}
+
+	@media only screen and (max-width: 480px) {
+		
+		left: 20%;
+		.social-links {
+			width: 4rem;
+		}
+	}
 `;

@@ -11,9 +11,9 @@ import Links from "./Links";
 const Home = () => {
 	return (
 		<Main>
-			<Side>
+			{/* <Side>
 				<Sidebar />
-			</Side>
+			</Side> */}
 			<Links />
 			<section id="Homepage">
 				<Hero />
@@ -34,8 +34,8 @@ const Home = () => {
 export default Home;
 
 const Main = styled.div`
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 `;
 
 const Side = styled.div`
@@ -56,6 +56,10 @@ const Side = styled.div`
 	background: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(12.5px);
 	-webkit-backdrop-filter: blur(12.5px);
+
+	@media only screen and (max-width: 480px) {
+		/* display: none; */
+	}
 `;
 
 // const Side = styled.div`

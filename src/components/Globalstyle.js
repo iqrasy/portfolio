@@ -19,14 +19,12 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   scroll-behavior: smooth;
-  min-height: 100%;
 }
 
   body {
     background-color: #000814;
     color: #eaded2;
     height: 100vh;
-    position: relative;
 }
 
 
@@ -39,6 +37,13 @@ html {
     text-decoration: none;
     color: inherit;
   }
+
+  	@media only screen and (max-width: 480px) {
+      html {
+       overflow-x: hidden; 
+      }
+    
+    }
 
 `;
 

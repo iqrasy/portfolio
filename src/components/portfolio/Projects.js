@@ -158,6 +158,7 @@ const Div = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-top: 6rem;
 
 	.box {
 		display: flex;
@@ -177,6 +178,14 @@ const Div = styled.div`
 			transform: translateX(1px);
 		}
 	}
+
+	@media only screen and (max-width: 480px) {
+		margin-top: 5rem;
+		.projects {
+			width: 50vh;
+			font-size: 4vh;
+		}
+	}
 `;
 
 const ProjectContainer = styled.div`
@@ -189,8 +198,8 @@ const ProjectContainer = styled.div`
 	margin: 0 auto;
 	height: 100vh;
 	width: 100vw;
-	color: white;
-	background-color: #000000;
+	color: #eaded2;
+	background-color: #000814;
 	z-index: 10;
 	transform: translateY(100vh);
 	transition: transform 0.2s ease-in-out;
@@ -216,6 +225,13 @@ const ProjectContainer = styled.div`
 
 		&:hover {
 			box-shadow: 0 0 50px 5px #cdb4db;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.close {
+			top: 9rem;
+			right: 2rem;
 		}
 	}
 `;

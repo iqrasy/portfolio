@@ -112,3 +112,43 @@
 		stroke-dasharray: 450;
 	}
 }
+
+@media only screen and (max-width: 480px) {
+	.main-container {
+		// border: solid green 1px;
+		display: flex;
+		flex-direction: column;
+		margin-top: 25rem;
+	}
+
+	.head {
+		font-size: 1.7rem;
+	}
+
+	.description {
+		width: 80vw;
+		margin-right: 0rem;
+		max-width: 85vw;
+	}
+
+	.image-container {
+		margin-bottom: 2rem;
+	}
+
+	.image-one {
+		width: 90vw;
+		margin-top: 1rem;
+	}
+
+	.link {
+		z-index: 10;
+		position: relative;
+		top: 2rem;
+		left: 1rem;
+		cursor: pointer;
+	}
+
+	.circle {
+		display: none;
+	}
+}

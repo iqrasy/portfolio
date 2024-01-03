@@ -59,17 +59,16 @@ const Contact = () => {
 		<>
 			<Div className="wrap">
 				<div className="container-wrapper">
-					<div></div>
+					<div className="second-grid">
+						<p className="project">Got a Project in Mind?</p>
+						<h1 className="links">LET'S TALK</h1>
+					</div>
 					<div className="first-grid">
 						<p>
 							Get in touch with me to discuss your project, ask questions, or
 							inquire about my services. I am here to assist you.
 						</p>
 						<p>Email: syiqra@hotmail.com</p>
-					</div>
-					<div className="second-grid">
-						<p className="project">Got a Project in Mind?</p>
-						<h1 className="links">LET'S TALK</h1>
 					</div>
 				</div>
 				<div className="footer">
@@ -114,5 +113,18 @@ const Div = styled.div`
 	.project {
 		font-family: "Nunito", sans-serif;
 		font-size: 1rem;
+	}
+
+	@media only screen and (max-width: 480px) {
+		.container-wrapper {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			padding: 1rem 3rem;
+		}
+
+		.links {
+			font-size: 3rem;
+		}
 	}
 `;

@@ -12,7 +12,9 @@ const Footer = () => {
 				<h3>Built and Designed by Iqra Imran Syed</h3>
 				<h3 className="copyright">Copyright © {year} </h3>
 			</div>
-			<Links />
+			<div className="link-component">
+				<Links />
+			</div>
 		</FooterContainer>
 	);
 };
@@ -35,9 +37,20 @@ const FooterContainer = styled.footer`
 	}
 
 	@media only screen and (max-width: 480px) {
-		bottom: 0;
-		width: 85%;
+		position: relative;
+		bottom: 4rem;
 		text-align: center;
-		font-size: 0.6rem;
+		font-size: 1rem;
+
+		.copyright {
+			padding-left: 0;
+		}
+
+		.link-component {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+		}
 	}
 `;

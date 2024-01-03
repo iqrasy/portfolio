@@ -164,19 +164,34 @@ const Div = styled.div`
 		margin-bottom: 2rem;
 	}
 
-	@media (max-width: 768px) {
+	@media only screen and (max-width: 480px) {
+		.first {
+			width: 90vw;
+			margin: 13rem auto;
+		}
+
 		.header {
-			font-size: 1.5rem;
-			max-width: 60vw;
+			font-size: 1.3rem;
+			margin-bottom: 2rem;
 		}
 
 		.text {
-			font-size: 1rem;
-			max-width: 80vw;
+			font-size: 1.1rem;
+			line-height: 1.5;
+		}
+
+		.main-head-cont {
+			margin-bottom: 2rem;
 		}
 
 		.head-cont {
 			font-size: 3rem;
+		}
+
+		.skills,
+		.experience {
+			line-height: 1.5;
+			margin-bottom: 1rem;
 		}
 	}
 `;

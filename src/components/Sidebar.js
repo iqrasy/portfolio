@@ -44,4 +44,8 @@ const Main = styled.div`
 		transform: rotate(90deg);
 		transform-origin: center;
 	}
+
+	@media only screen and (max-width: 480px) {
+		/* display: none; */
+	}
 `;
