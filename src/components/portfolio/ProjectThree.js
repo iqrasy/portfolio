@@ -9,17 +9,6 @@ const ProjectThree = () => {
 		<Div>
 			<div id="chatgpt clone">
 				<div className="main-container">
-					<h1 className="head">
-						CHAT-GPT CLONE
-						<p className="description">
-							This project is a ChatGPT clone developed using the OpenAI API,
-							specifically utilizing the 'gpt-3.5-turbo' model. It is
-							implemented as a single-page React application, featuring user
-							authentication and signup functionality powered by Auth0. Auth0
-							also provides conversation tracking capabilities, enabling
-							seamless management of user interactions and chat history.
-						</p>
-					</h1>
 					<div className="project-text">
 						<svg
 							className="circle"
@@ -46,6 +35,17 @@ const ProjectThree = () => {
 							<MdOutlineArrowOutward />
 						</a>
 					</div>
+					<h1 className="head">
+						CHAT-GPT CLONE
+						<p className="description">
+							This project is a ChatGPT clone developed using the OpenAI API,
+							specifically utilizing the 'gpt-3.5-turbo' model. It is
+							implemented as a single-page React application, featuring user
+							authentication and signup functionality powered by Auth0. Auth0
+							also provides conversation tracking capabilities, enabling
+							seamless management of user interactions and chat history.
+						</p>
+					</h1>
 					<div className="image-container">
 						<img className="image-one" src={chat} />
 						<img className="image-two" src={first} />

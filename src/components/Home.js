@@ -6,6 +6,7 @@ import styled from "styled-components";
 import "./app.scss";
 import Hero from "./Hero";
 import Sidebar from "./Sidebar";
+import Links from "./Links";
 
 const Home = () => {
 	return (
@@ -13,6 +14,7 @@ const Home = () => {
 			<Side>
 				<Sidebar />
 			</Side>
+			<Links />
 			<section id="Homepage">
 				<Hero />
 			</section>
@@ -37,7 +39,7 @@ const Main = styled.div`
 `;
 
 const Side = styled.div`
-z-index: 20;
+	z-index: 20;
 	width: 15%;
 	max-width: 5rem;
 	height: 100vh;

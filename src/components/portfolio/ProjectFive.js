@@ -7,14 +7,6 @@ const ProjectFive = () => {
 		<Div>
 			<div id="metropole">
 				<div className="main-container">
-					<h1 className="head">
-						MÉTROPOLE
-						<p className="description">
-							Métropole is a travellers guide to Montreal. It allows you to book
-							restaurants, hotels, and activities all in one place. You can
-							create an account which makes it easy to manage your bookings.
-						</p>
-					</h1>
 					<div className="project-text">
 						<svg
 							className="circle"
@@ -41,6 +33,14 @@ const ProjectFive = () => {
 							<MdOutlineArrowOutward />
 						</a>
 					</div>
+					<h1 className="head">
+						MÉTROPOLE
+						<p className="description">
+							Métropole is a travellers guide to Montreal. It allows you to book
+							restaurants, hotels, and activities all in one place. You can
+							create an account which makes it easy to manage your bookings.
+						</p>
+					</h1>
 					{/* <img className="image-one" src={mainPage} />
 					<img className="image-two" src={landingPage} /> */}
 				</div>

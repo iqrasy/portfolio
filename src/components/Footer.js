@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
 import Links from "./Links";
 
 const Footer = () => {
@@ -9,17 +8,11 @@ const Footer = () => {
 
 	return (
 		<FooterContainer>
-			<Container>
-				<Row>
-					<Col>
-						<h3>Built and Designed by Iqra Imran Syed</h3>
-					</Col>
-					<Col>
-						<h3>Copyright © {year} </h3>
-					</Col>
-					<Links />
-				</Row>
-			</Container>
+			<div className="footer-container">
+				<h3>Built and Designed by Iqra Imran Syed</h3>
+				<h3 className="copyright">Copyright © {year} </h3>
+			</div>
+			<Links />
 		</FooterContainer>
 	);
 };
@@ -27,24 +20,18 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-	padding: 1rem;
+	padding: 0.5rem;
 	bottom: 0;
 	width: 100%;
-	text-align: center;
-	font-size: 0.7rem;
+	text-align: left;
 	font-family: "Nunito", sans-serif;
 
-	ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0;
-		padding: 0;
+	.footer-container {
+		font-size: 0.7rem;
 	}
 
-	a {
-		font-size: 1.2rem;
-		color: #6c757d;
+	.copyright {
+		padding-left: 3rem;
 	}
 
 	@media only screen and (max-width: 480px) {
@@ -52,17 +39,5 @@ const FooterContainer = styled.footer`
 		width: 85%;
 		text-align: center;
 		font-size: 0.6rem;
-
-		a {
-			font-size: 1rem;
-		}
-
-		ul {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0;
-			padding: 0;
-		}
 	}
 `;

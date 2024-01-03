@@ -8,14 +8,6 @@ const ProjectFour = () => {
 		<Div>
 			<div id="portfolio">
 				<div className="main-container">
-					<h1 className="head">
-						PORTFOLIO
-						<p className="description">
-							This is my personal portfolio, built with React.js, GSAP
-							animations and framer motion and designed to showcase my work and
-							skills!
-						</p>
-					</h1>
 					<div className="project-text">
 						<svg
 							className="circle"
@@ -42,6 +34,14 @@ const ProjectFour = () => {
 							<MdOutlineArrowOutward />
 						</a>
 					</div>
+					<h1 className="head">
+						PORTFOLIO
+						<p className="description">
+							This is my personal portfolio, built with React.js, GSAP
+							animations and framer motion and designed to showcase my work and
+							skills!
+						</p>
+					</h1>
 					<div className="image-container">
 						<img className="image-one" src={portfolio} />
 					</div>

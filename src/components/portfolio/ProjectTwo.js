@@ -8,16 +8,6 @@ const ProjectTwo = () => {
 		<Div>
 			<div id="article-summarizer">
 				<div className="main-container">
-					<h1 className="head">
-						AI ARTICLE SUMMARIZER
-						<p className="description">
-							I've developed a powerful SaaS article summarizer powered by
-							ChatGPT-4. The frontend, built with React and Redux, offers a
-							seamless user experience. With a strong focus on SEO, this
-							application ensures that content is not only summarized
-							efficiently but also optimized for search engine visibility.
-						</p>
-					</h1>
 					<div className="project-text">
 						<svg
 							className="circle"
@@ -44,6 +34,16 @@ const ProjectTwo = () => {
 							<MdOutlineArrowOutward />
 						</a>
 					</div>
+					<h1 className="head">
+						AI ARTICLE SUMMARIZER
+						<p className="description">
+							I've developed a powerful SaaS article summarizer powered by
+							ChatGPT-4. The frontend, built with React and Redux, offers a
+							seamless user experience. With a strong focus on SEO, this
+							application ensures that content is not only summarized
+							efficiently but also optimized for search engine visibility.
+						</p>
+					</h1>
 					<div className="image-container">
 						<img className="image-one" src={summary} />
 					</div>

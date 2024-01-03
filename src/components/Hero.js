@@ -54,17 +54,13 @@ export default Hero;
 const Div = styled.div`
 	.hero {
 		height: 100vh;
+		margin: 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
 	.pitch {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 10px;
 		max-width: 80vw;
 		width: 80vw;
 		margin: 0 auto;

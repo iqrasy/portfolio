@@ -156,8 +156,8 @@ const Div = styled.div`
 	height: 100vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	margin-left: 5rem;
 
 	.box {
 		display: flex;
@@ -167,8 +167,8 @@ const Div = styled.div`
 
 	.projects {
 		transition: transform 0.5s ease;
+		width: 80vh;
 		font-size: 6vh;
-		/* z-index: 10; */
 		cursor: pointer;
 		padding-left: 1rem;
 
@@ -199,7 +199,7 @@ const ProjectContainer = styled.div`
 	.close {
 		position: absolute;
 		top: 5rem;
-		right: 3rem;
+		right: 9rem;
 		color: #adb5bd;
 		border: solid rgba(255, 255, 255, 0.05) 1px;
 		outline: none;
