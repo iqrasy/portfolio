@@ -154,11 +154,13 @@ export default Projects;
 
 const Div = styled.div`
 	height: 100vh;
+	width: 70vw;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	flex-direction: column;
 	margin-top: 6rem;
+	margin-left: 12rem;
 
 	.box {
 		display: flex;
@@ -168,7 +170,7 @@ const Div = styled.div`
 
 	.projects {
 		transition: transform 0.5s ease;
-		width: 80vh;
+		width: 80vw;
 		font-size: 6vh;
 		cursor: pointer;
 		padding-left: 1rem;

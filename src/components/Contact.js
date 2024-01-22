@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Footer from "./Footer";
@@ -55,6 +55,7 @@ const Contact = () => {
 			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 		};
 	}, [controls]);
+
 	return (
 		<>
 			<Div className="wrap">
@@ -82,6 +83,7 @@ const Contact = () => {
 export default Contact;
 
 const Div = styled.div`
+	width: 40vw;
 	.wrap {
 		display: flex;
 		justify-content: center;
@@ -90,18 +92,16 @@ const Div = styled.div`
 
 	.container-wrapper {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 5rem;
-		grid-row-gap: 0px;
 		padding: 10rem 5rem;
 		font-family: "Nunito", sans-serif;
-		font-size: 1rem;
 		height: 100vh;
 	}
 
 	.first-grid {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		line-height: 1.4;
 	}
 

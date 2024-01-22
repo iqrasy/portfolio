@@ -80,9 +80,9 @@ const About = () => {
 				<div>
 					<h2 className="experience">EXPERIENCE</h2>
 					<ul className="skills">
-						<li>- Degree in web development</li>
-						<li>- 1+ year of experience as a web developer</li>
-						<li>- Currently working at Schevvratex Yarns as a Web Developer</li>
+						<li> Degree in web development</li>
+						<li> 1+ year of experience as a web developer</li>
+						<li> Currently working at Schevratex Yarns as a Web Developer</li>
 					</ul>
 				</div>
 				<div>
@@ -123,12 +123,14 @@ const Div = styled.div`
 		font-weight: 300;
 		margin-bottom: 2rem;
 		text-align: left;
+		width: 40vw;
 	}
 
 	.text {
 		font-size: 1.2rem;
 		margin-bottom: 2rem;
-		min-width: 60vw;
+		width: 40vw;
+		line-height: 1.5;
 	}
 
 	.main-head-cont {
@@ -149,12 +151,14 @@ const Div = styled.div`
 		font-family: "Stardom", sans-serif;
 	}
 
-	li {
+	/* li {
 		list-style-type: none;
-	}
+	} */
 
 	.skills {
 		margin-bottom: 2rem;
+		width: 40vw;
+		line-height: 1.5;
 	}
 
 	@media only screen and (max-width: 480px) {

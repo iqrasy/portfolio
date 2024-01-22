@@ -9,7 +9,35 @@ const ProjectOne = () => {
 		<Div>
 			<div id="calendar">
 				<div className="main-container">
-					<div className="project-text">
+					{/* <div className="image-container">
+						<img className="image-one" src={mainPage} />
+					</div>
+					<h1 className="head">
+						PERSONAL-CALENDAR
+						<p className="description">
+							I've developed my own version of a calendar where you can plan out
+							your day, week, and year. The Modern Calendar App is a
+							feature-rich, user-friendly calendar application designed to
+							streamline your scheduling and organization needs. It offers a
+							seamless and intuitive experience with a React-based frontend and
+							a powerful backend powered by Node.js, Express, and PostgreSQL.
+						</p>
+					</h1> */}
+					<div className="image-container">
+						<img className="image-one" src={mainPage} alt="Main Page" />
+					</div>
+					<div className="text-container">
+						<h1 className="head">PERSONAL-CALENDAR</h1>
+						<p className="description">
+							I've developed my own version of a calendar where you can plan out
+							your day, week, and year. The Modern Calendar App is a
+							feature-rich, user-friendly calendar application designed to
+							streamline your scheduling and organization needs. It offers a
+							seamless and intuitive experience with a React-based frontend and
+							a powerful backend powered by Node.js, Express, and PostgreSQL.
+						</p>
+					</div>
+					{/* <div className="project-text">
 						<svg
 							className="circle"
 							width="7rem"
@@ -34,21 +62,7 @@ const ProjectOne = () => {
 						>
 							<MdOutlineArrowOutward />
 						</a>
-					</div>
-					<h1 className="head">
-						PERSONAL-CALENDAR
-						<p className="description">
-							I've developed my own version of a calendar where you can plan out
-							your day, week, and year. The Modern Calendar App is a
-							feature-rich, user-friendly calendar application designed to
-							streamline your scheduling and organization needs. It offers a
-							seamless and intuitive experience with a React-based frontend and
-							a powerful backend powered by Node.js, Express, and PostgreSQL.
-						</p>
-					</h1>
-					<div className="image-container">
-						<img className="image-one" src={mainPage} />
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Div>

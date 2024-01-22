@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Sphere from "./Sphere";
 
 const Link = () => {
 	const items = ["Homepage", "About", "Portfolio", "Contact"];
@@ -7,6 +8,7 @@ const Link = () => {
 	return (
 		<Main>
 			<nav>
+				{/* <Sphere /> */}
 				{items.map((item) => (
 					<div key={item}>
 						<a href={`/#${item}`}>

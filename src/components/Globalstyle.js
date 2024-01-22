@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 ::selection {
   background-color: var(--custom-highlight-color);
   color: #000814; 
+ 
 }
 
 * {
@@ -21,11 +22,12 @@ html {
   scroll-behavior: smooth;
 }
 
-  body {
-    background-color: #000814;
-    color: #eaded2;
-    height: 100vh;
+body {
+  background-color: #000814;
+  color: #eaded2;
+  height: 100vh;
 }
+
 
 
   span {
