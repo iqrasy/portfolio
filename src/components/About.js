@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import starr from "../assets/starr.png";
+import squares from "../assets/squares.png";
+import circles from "../assets/circles.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,12 +73,34 @@ const About = () => {
 				</SecondBox>
 				<ThirdBox>
 					<SubHeader>
-						<h3>Heyy there! My name Is Iqra and I'm a Front-end Developer.</h3>
+						<p>Hey there! I'm Iqra - a Web Developer based in Montreal</p>
 					</SubHeader>
 				</ThirdBox>
-				<Intro>
-					<p className="text"></p>
-				</Intro>
+				<FourthBox>
+					<Intro>
+						<p>
+							My goal is to make the web not only functional but also visually
+							engaging and enjoyable for users
+						</p>
+					</Intro>
+				</FourthBox>
+				<FifthBox>
+					<Description>
+						<p>
+							I create seamless and responsive UI's that elevate digital
+							experiences
+						</p>
+					</Description>
+				</FifthBox>
+				<ImageContainer>
+					<img src={starr} alt="star" />
+				</ImageContainer>
+				<SquareContainer>
+					<img src={squares} alt="squares" />
+				</SquareContainer>
+				<CircleContainer>
+					<img src={circles} alt="rings" />
+				</CircleContainer>
 				{/* <div>
 					<h2 className="experience">EXPERIENCE</h2>
 					<ul className="skills">
@@ -126,9 +151,9 @@ const Div = styled.div`
 		font-family: "Nunito", sans-serif;
 		letter-spacing: 0.1rem;
 
-		> * {
+		/* > * {
 			border: 0.1px solid #463f3a;
-		}
+		} */
 	}
 
 	/* 
@@ -160,22 +185,20 @@ const Header = styled.div`
 `;
 
 const SecondBox = styled.div`
-	grid-column: 2;
+	grid-column: 1;
 	grid-row: 3;
 `;
 
 const SubHeader = styled.div`
 	margin: 0 auto;
 
-	h3 {
-		font-size: 1.2rem;
-		font-weight: 300;
+	p {
 		padding: 1rem;
 	}
 `;
 
 const ThirdBox = styled.div`
-	grid-column: 4;
+	grid-column: 3;
 	grid-row: 2;
 	display: flex;
 	align-items: center;
@@ -183,8 +206,62 @@ const ThirdBox = styled.div`
 
 const Intro = styled.div`
 	p {
-		font-size: 1.2rem;
-		margin-bottom: 2rem;
-		line-height: 1.5;
+		padding: 1rem;
+	}
+`;
+
+const FourthBox = styled.div`
+	grid-column: 3;
+	grid-row: 4;
+	display: flex;
+	align-items: center;
+`;
+
+const Description = styled.div`
+	p {
+		padding: 1rem;
+	}
+`;
+
+const FifthBox = styled.div`
+	grid-column: 4;
+	grid-row: 3;
+	display: flex;
+	align-items: center;
+`;
+
+const ImageContainer = styled.div`
+	grid-column: 2;
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		height: 15vh;
+	}
+`;
+
+const SquareContainer = styled.div`
+	grid-column: 5;
+	grid-row: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		height: 15vh;
+	}
+`;
+
+const CircleContainer = styled.div`
+	grid-column: 1;
+	grid-row: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		height: 15vh;
 	}
 `;
