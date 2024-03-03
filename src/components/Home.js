@@ -3,21 +3,25 @@ import About from "./About";
 import Projects from "./portfolio/Projects";
 import Contact from "./Contact";
 import styled from "styled-components";
-import "./app.scss";
 import Hero from "./Hero";
 import Sidebar from "./Sidebar";
 import Links from "./Links";
+import Sphere from "./Sphere";
 
 const Home = () => {
 	return (
 		<Main>
-			<Side>
+			{/* <Side>
 				<Sidebar />
-			</Side>
+			</Side> */}
 			<Links />
 			<section id="Homepage">
 				<Hero />
 			</section>
+			{/* <section className="divider"></section>
+			<section id="sphere">
+				<Sphere />
+			</section> */}
 			<section id="About">
 				<About />
 			</section>
@@ -34,8 +38,22 @@ const Home = () => {
 export default Home;
 
 const Main = styled.div`
-	/* display: flex; */
-	/* flex-direction: column; */
+	background-color: var(--bg-100);
+	color: var(--text-100);
+
+	section {
+		height: 100vh;
+	}
+
+	/* .divider {
+		height: 50vh;
+	}
+
+	.sphere {
+		position: absolute;
+		top: 10rem;
+		margin-top: 10rem;
+	} */
 `;
 
 const Side = styled.div`

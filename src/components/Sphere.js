@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { gsap } from "gsap";
+
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Sphere = () => {
 	const refContainer = useRef(null);
@@ -175,44 +178,44 @@ const Sphere = () => {
   }  
 `;
 
-		// const fragmentShader = `
-		//   varying float vDistort;
-
-		//   uniform float uTime;
-		//   uniform float uIntensity;
-
-		//   void main() {
-		//     float distort = vDistort * uIntensity;
-		//     vec3 color = vec3(distort);
-
-		//     gl_FragColor = vec4(color, 1.0);
-		//   }
-		// `;
-
 		const fragmentShader = `
-			  varying vec2 vUv;
-			  varying float vDistort;
+		  varying float vDistort;
 
-			  uniform float uTime;
-			  uniform float uIntensity;
+		  uniform float uTime;
+		  uniform float uIntensity;
 
-			  vec3 cosPalette(float t, vec3 a, vec3 b, vec3 c, vec3 d) {
-			    return a + b * cos(6.28318 * (c * t + d));
-			  }
+		  void main() {
+		    float distort = vDistort * uIntensity;
+		    vec3 color = vec3(distort);
 
-			  void main() {
-			    float distort = vDistort * uIntensity;
+		    gl_FragColor = vec4(color, 1.0);
+		  }
+		`;
 
-			    vec3 brightness = vec3(0.5, 0.5, 0.5);
-		vec3 contrast = vec3(0.5, 0.5, 0.5);
-		vec3 oscilation = vec3(1.0, 1.0, 1.0);
-		vec3 phase = vec3(0.0, 0.1, 0.2);
+		// const fragmentShader = `
+		// 	  varying vec2 vUv;
+		// 	  varying float vDistort;
 
-			    vec3 color = cosPalette(distort, brightness, contrast, oscilation, phase);
+		// 	  uniform float uTime;
+		// 	  uniform float uIntensity;
 
-			    gl_FragColor = vec4(color, 1.0);
-			  }
-			`;
+		// 	  vec3 cosPalette(float t, vec3 a, vec3 b, vec3 c, vec3 d) {
+		// 	    return a + b * cos(6.28318 * (c * t + d));
+		// 	  }
+
+		// 	  void main() {
+		// 	    float distort = vDistort * uIntensity;
+
+		// 	    vec3 brightness = vec3(0.5, 0.5, 0.5);
+		// vec3 contrast = vec3(0.5, 0.5, 0.5);
+		// vec3 oscilation = vec3(1.0, 1.0, 1.0);
+		// vec3 phase = vec3(0.0, 0.1, 0.2);
+
+		// 	    vec3 color = cosPalette(distort, brightness, contrast, oscilation, phase);
+
+		// 	    gl_FragColor = vec4(color, 1.0);
+		// 	  }
+		// 	`;
 
 		const settings = {
 			speed: 0.5,
@@ -268,12 +271,8 @@ export default Sphere;
 const Div = styled.div`
 	height: 100vh;
 	width: 100vw;
-	position: fixed;
-	bottom: 13rem;
-	/* top: 0; */
-	left: 0;
+	border: solid green 1px;
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	overflow: hidden;
+	justify-content: center;
+	align-items: flex-start;
 `;

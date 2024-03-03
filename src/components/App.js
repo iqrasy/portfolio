@@ -2,7 +2,6 @@ import React from "react";
 import GlobalStyles from "./Globalstyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Sphere from "./Sphere";
 
 const App = () => {
 	return (

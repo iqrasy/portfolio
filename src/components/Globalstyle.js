@@ -4,6 +4,10 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
   --custom-highlight-color: #eaded2; 
+  --text-100: #eaded2;
+  --text-200: #8a817c;
+  --bg-100: #0A0908;
+  
 }
 
 ::selection {
@@ -23,16 +27,10 @@ html {
 }
 
 body {
-  background-color: #000814;
-  color: #eaded2;
   height: 100vh;
+  width: 100vw;
 }
 
-
-
-  span {
-    font-weight: bold;
-  }
 
   a {
     cursor: pointer;
@@ -40,12 +38,6 @@ body {
     color: inherit;
   }
 
-  	@media only screen and (max-width: 480px) {
-      html {
-       overflow-x: hidden; 
-      }
-    
-    }
 
 `;
 

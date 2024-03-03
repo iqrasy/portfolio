@@ -63,25 +63,24 @@ const About = () => {
 				initial="initial"
 				animate={controls}
 			>
-				<div className="main-head-cont">
-					<h1 className="head-cont"> ABOUT ME</h1>
-				</div>
-				<h3 className="header">
-					A developer, problem solver, and critical thinker
-				</h3>
-				<p className="text">
-					I first got into the tech sphere when I was introduced to coding
-					during my first year of university. I discovered a world where
-					imagination translates into action, and ideas come to life at the
-					click of a button. Since then, I have always been captivated by the
-					infinite possibilities that technology offers. Which eventually led me
-					to pursue a career in development.
-				</p>
-				<div>
+				<SecondBox>
+					<Header>
+						<h1 className="head-cont"> ABOUT </h1>
+					</Header>
+				</SecondBox>
+				<ThirdBox>
+					<SubHeader>
+						<h3>Heyy there! My name Is Iqra and I'm a Front-end Developer.</h3>
+					</SubHeader>
+				</ThirdBox>
+				<Intro>
+					<p className="text"></p>
+				</Intro>
+				{/* <div>
 					<h2 className="experience">EXPERIENCE</h2>
 					<ul className="skills">
 						<li> Degree in web development</li>
-						<li> 1+ year of experience as a web developer</li>
+						<li> 1+ year of experience </li>
 						<li> Currently working at Schevratex Yarns as a Web Developer</li>
 					</ul>
 				</div>
@@ -89,10 +88,10 @@ const About = () => {
 					<h2 className="experience">SKILLS</h2>
 					<p className="skills">
 						JavaScript / React.js / MongoDB / Node.js / Express.js / Three.js /
-						Python / PostgreSQL / Bootstrap / Next.js / json / REST / GIT /
-						GitHub / Auth0 / NPM / BASH
+						PostgreSQL / Bootstrap / Next.js / json / REST / GIT / GitHub /
+						Auth0 / NPM / BASH
 					</p>
-				</div>
+				</div> */}
 			</motion.div>
 		</Div>
 	);
@@ -101,94 +100,91 @@ const About = () => {
 export default About;
 
 const Div = styled.div`
+	background-image: linear-gradient(
+			#463f3a 0.1px,
+			transparent 0.5px,
+			transparent calc(100% - 0.5px),
+			#463f3a calc(100% - 0.5px)
+		),
+		linear-gradient(
+			90deg,
+			#463f3a 0.1px,
+			transparent 0.2px,
+			transparent calc(100% - 0.5px),
+			#463f3a calc(100% - 0.5px)
+		);
+	background-size: 20% 20%;
+	border: 0.1px solid #463f3a;
+
 	.first {
 		height: 100vh;
-		width: 70vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(5, 1fr);
 		margin: 0 auto;
 		font-family: "Nunito", sans-serif;
-		font-weight: 300;
 		letter-spacing: 0.1rem;
 
-		&::selection {
-			background-color: white;
-			color: black;
+		> * {
+			border: 0.1px solid #463f3a;
 		}
 	}
 
-	.header {
-		font-size: 2rem;
-		font-weight: 300;
-		margin-bottom: 2rem;
-		text-align: left;
-		width: 40vw;
-	}
-
-	.text {
-		font-size: 1.2rem;
-		margin-bottom: 2rem;
-		width: 40vw;
-		line-height: 1.5;
-	}
-
-	.main-head-cont {
-		height: 4rem;
-		display: flex;
-		justify-content: left;
-		margin-bottom: 7rem;
-	}
-
-	.head-cont {
-		font-family: "Stardom", sans-serif;
-		text-align: center;
-		font-size: 5rem;
-	}
-
+	/* 
 	.experience {
 		margin-bottom: 1rem;
 		font-family: "Stardom", sans-serif;
-	}
+	} */
 
 	/* li {
 		list-style-type: none;
 	} */
 
-	.skills {
+	/* .skills {
 		margin-bottom: 2rem;
 		width: 40vw;
 		line-height: 1.5;
+	} */
+`;
+
+const Header = styled.div`
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	h1 {
+		font-family: "Stardom", sans-serif;
+		font-size: 4rem;
 	}
+`;
 
-	@media only screen and (max-width: 480px) {
-		.first {
-			width: 90vw;
-			margin: 13rem auto;
-		}
+const SecondBox = styled.div`
+	grid-column: 2;
+	grid-row: 3;
+`;
 
-		.header {
-			font-size: 1.3rem;
-			margin-bottom: 2rem;
-		}
+const SubHeader = styled.div`
+	margin: 0 auto;
 
-		.text {
-			font-size: 1.1rem;
-			line-height: 1.5;
-		}
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 300;
+		padding: 1rem;
+	}
+`;
 
-		.main-head-cont {
-			margin-bottom: 2rem;
-		}
+const ThirdBox = styled.div`
+	grid-column: 4;
+	grid-row: 2;
+	display: flex;
+	align-items: center;
+`;
 
-		.head-cont {
-			font-size: 3rem;
-		}
-
-		.skills,
-		.experience {
-			line-height: 1.5;
-			margin-bottom: 1rem;
-		}
+const Intro = styled.div`
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		line-height: 1.5;
 	}
 `;

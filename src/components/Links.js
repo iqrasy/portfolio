@@ -51,14 +51,14 @@ const Div = styled.div`
 	left: 1rem;
 	display: flex;
 	flex-direction: column;
-	color: grey;
+	color: var(--text-200);
 
 	button {
 		background-color: transparent;
 		border: none;
 		font-family: "Stardom", sans-serif;
 		font-size: 1rem;
-		color: grey;
+		color: var(--text-200);
 		cursor: pointer;
 		padding-top: 1rem;
 		transition: transform 0.3s ease;
