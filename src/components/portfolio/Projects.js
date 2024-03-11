@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion, useAnimation } from "framer-motion";
-import "./portfolio.scss";
+// import "./portfolio.scss";
 import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
 import ProjectThree from "./ProjectThree";

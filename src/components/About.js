@@ -73,7 +73,9 @@ const About = () => {
 				</SecondBox>
 				<ThirdBox>
 					<SubHeader>
-						<p>Hey there! I'm Iqra - a Web Developer based in Montreal</p>
+						<p>
+							Hey there! I'm Iqra - a Frontend Web Developer based in Montreal
+						</p>
 					</SubHeader>
 				</ThirdBox>
 				<FourthBox>
@@ -139,7 +141,6 @@ const Div = styled.div`
 			#463f3a calc(100% - 0.5px)
 		);
 	background-size: 20% 20%;
-	border: 0.1px solid #463f3a;
 
 	.first {
 		height: 100vh;
@@ -150,10 +151,6 @@ const Div = styled.div`
 		margin: 0 auto;
 		font-family: "Nunito", sans-serif;
 		letter-spacing: 0.1rem;
-
-		/* > * {
-			border: 0.1px solid #463f3a;
-		} */
 	}
 
 	/* 
@@ -239,6 +236,7 @@ const ImageContainer = styled.div`
 
 	img {
 		height: 15vh;
+		opacity: 0.3;
 	}
 `;
 
@@ -251,6 +249,7 @@ const SquareContainer = styled.div`
 
 	img {
 		height: 15vh;
+		opacity: 0.3;
 	}
 `;
 
@@ -263,5 +262,6 @@ const CircleContainer = styled.div`
 
 	img {
 		height: 15vh;
+		opacity: 0.3;
 	}
 `;

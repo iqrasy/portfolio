@@ -90,13 +90,14 @@ const Div = styled.div`
 	align-items: flex-end;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	/* border: solid green 1px; */
 	height: 100%;
+	overflow-x: hidden;
 
 	.pitch {
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-end;
+
 		h1 {
 			font-family: "Stardom", sans-serif;
 			letter-spacing: 0.7rem;

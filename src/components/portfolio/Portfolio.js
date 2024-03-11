@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import summary from "./asset/summary.png";
+import portfolio from "./asset/portfolio.png";
 
-const ProjectTwo = () => {
+const Portfolio = () => {
 	return (
 		<Div>
-			<div id="article-summarizer">
+			<div id="portfolio">
 				<div className="main-container">
-					<div className="project-text">
+					{/* <div className="project-text">
 						<svg
 							className="circle"
 							width="7rem"
@@ -27,34 +27,32 @@ const ProjectTwo = () => {
 						</svg>
 						<a
 							className="link"
-							href="https://github.com/iqrasy/AI-article-summarizer"
+							href="https://github.com/iqrasy/portfolio"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<MdOutlineArrowOutward />
 						</a>
-					</div>
+					</div> */}
 					<h1 className="head">
-						AI ARTICLE SUMMARIZER
+						PORTFOLIO
 						<p className="description">
-							I've developed a powerful SaaS article summarizer powered by
-							ChatGPT-4. The frontend, built with React and Redux, offers a
-							seamless user experience. With a strong focus on SEO, this
-							application ensures that content is not only summarized
-							efficiently but also optimized for search engine visibility.
+							This is my personal portfolio, built with React.js, GSAP
+							animations and framer motion and designed to showcase my work and
+							skills!
 						</p>
 					</h1>
-					<div className="image-container">
-						<img className="image-one" src={summary} />
-					</div>
+					{/* <div className="image-container">
+						<img className="image-one" src={portfolio} />
+					</div> */}
 				</div>
 			</div>
 		</Div>
 	);
 };
 
-export default ProjectTwo;
+export default Portfolio;
 
 const Div = styled.div`
-	height: 100vh;
+	height: 50vh;
 `;

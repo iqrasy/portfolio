@@ -31,10 +31,10 @@ const ProjectOne = () => {
 						<p className="description">
 							I've developed my own version of a calendar where you can plan out
 							your day, week, and year. The Modern Calendar App is a
-							feature-rich, user-friendly calendar application designed to
-							streamline your scheduling and organization needs. It offers a
-							seamless and intuitive experience with a React-based frontend and
-							a powerful backend powered by Node.js, Express, and PostgreSQL.
+							user-friendly application designed to streamline your scheduling
+							and organization needs. It offers a seamless and intuitive
+							experience with a React-based frontend and a powerful backend
+							powered by Node.js, Express, and PostgreSQL.
 						</p>
 					</div>
 					{/* <div className="project-text">

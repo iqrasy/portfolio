@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./About";
-import Projects from "./portfolio/Projects";
+// import Projects from "./portfolio/Projects";
+import Projects from "./Projects";
 import Contact from "./Contact";
 import styled from "styled-components";
 import Hero from "./Hero";
