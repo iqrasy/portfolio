@@ -12,17 +12,10 @@ import Sphere from "./Sphere";
 const Home = () => {
 	return (
 		<Main>
-			{/* <Side>
-				<Sidebar />
-			</Side> */}
 			<Links />
 			<section id="Homepage">
 				<Hero />
 			</section>
-			{/* <section className="divider"></section>
-			<section id="sphere">
-				<Sphere />
-			</section> */}
 			<section id="About">
 				<About />
 			</section>
@@ -39,22 +32,19 @@ const Home = () => {
 export default Home;
 
 const Main = styled.div`
-	background-color: var(--bg-100);
+	/* background-color: var(--bg-100); */
+	background-color: hsla(30, 11%, 3%, 1);
+	background-image: radial-gradient(
+			at 98% 22%,
+			hsla(0, 0%, 16%, 0.57) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 6% 71%, hsla(0, 0%, 16%, 0.6) 0px, transparent 50%);
 	color: var(--text-100);
 
 	section {
 		height: 100vh;
 	}
-
-	/* .divider {
-		height: 50vh;
-	}
-
-	.sphere {
-		position: absolute;
-		top: 10rem;
-		margin-top: 10rem;
-	} */
 `;
 
 const Side = styled.div`

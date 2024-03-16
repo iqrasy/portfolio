@@ -4,6 +4,8 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
   --custom-highlight-color: #eaded2; 
+  --accent-100: #b6465f;
+  --accent-200: #B54A61;
   --text-100: #eaded2;
   --text-200: #8a817c;
   --bg-100: #0A0908;

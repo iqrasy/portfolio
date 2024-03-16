@@ -6,6 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { MdOutlineArrowOutward } from "react-icons/md";
 import "./portfolio/portfolio.scss";
+import { Carousel } from "react-bootstrap";
 
 const Projects = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
@@ -40,30 +41,50 @@ const Projects = () => {
 
 		if (selectedProjectData) {
 			return (
-				<div>
-					<h2>{selectedProjectData.title}</h2>
-					<p>{selectedProjectData.description}</p>
-					{Array.isArray(selectedProjectData.images) ? (
-						selectedProjectData.images.map((image, index) => (
-							<img key={index} src={image.url} alt={image.altText} />
-						))
-					) : (
-						<img
-							src={selectedProjectData.images?.url}
-							alt={selectedProjectData.images?.altText}
-						/>
-					)}
-					<a
-						className="link"
-						href={selectedProjectData.link}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<MdOutlineArrowOutward />
-					</a>
-					<button className="close close-btn" onClick={handleCloseClick}>
-						CLOSE
-					</button>
+				<div className="main-container">
+					<div className="inner-container">
+						<button className="close close-btn" onClick={handleCloseClick}>
+							X
+						</button>
+						<div className="text-container">
+							<h2 className="head">{selectedProjectData.title}</h2>
+							<p className="description">
+								{selectedProjectData.description}{" "}
+								<a
+									className="link"
+									href={selectedProjectData.link}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<MdOutlineArrowOutward />
+								</a>
+							</p>
+						</div>
+						{Array.isArray(selectedProjectData.images) &&
+						selectedProjectData.images.length > 1 ? (
+							<div className="image-container">
+								<Carousel interval={6000} touch={true} pause="hover" fade>
+									{selectedProjectData.images.map((image, index) => (
+										<Carousel.Item key={index}>
+											<img
+												src={image.url}
+												alt={image.altText}
+												className="d-block w-100 centered-image"
+											/>
+										</Carousel.Item>
+									))}
+								</Carousel>
+							</div>
+						) : (
+							<div className="image-container">
+								<img
+									className="image centered-image"
+									src={selectedProjectData.images?.url}
+									alt={selectedProjectData.images?.altText}
+								/>
+							</div>
+						)}
+					</div>
 				</div>
 			);
 		} else {
@@ -106,8 +127,8 @@ const Container = styled.div`
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(5, 1fr);
 	padding: 2rem;
-	border: solid red 1px;
 	font-family: "Nunito", sans-serif;
+	/* border: solid red 1px; */
 `;
 
 const ProjectDiv = styled.div`
