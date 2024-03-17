@@ -7,10 +7,8 @@ const Footer = () => {
 
 	return (
 		<FooterContainer>
-			<div className="footer-container">
-				<h3>Built and Designed by Iqra Imran Syed</h3>
-				<h3 className="copyright">Copyright © {year} </h3>
-			</div>
+			<p>Built and Designed by Iqra Imran Syed</p>
+			<p>Copyright © {year} </p>
 		</FooterContainer>
 	);
 };
@@ -18,36 +16,13 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-	padding: 0.5rem;
-	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 	width: 100%;
 	font-family: "Nunito", sans-serif;
-	color: grey;
-	margin-left: 5rem;
-
-	.footer-container {
-		font-size: 0.7rem;
-	}
-
-	.copyright {
-		padding-left: 3rem;
-	}
-
-	@media only screen and (max-width: 480px) {
-		position: relative;
-		bottom: 4rem;
-		text-align: center;
-		font-size: 1rem;
-
-		.copyright {
-			padding-left: 0;
-		}
-
-		.link-component {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0 auto;
-		}
-	}
+	color: var(--text-200);
+	font-size: 0.7rem;
 `;

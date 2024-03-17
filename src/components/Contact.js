@@ -58,73 +58,105 @@ const Contact = () => {
 
 	return (
 		<>
-			<Div className="wrap">
-				<div className="container-wrapper">
-					<div className="second-grid">
-						<p className="project">Got a Project in Mind?</p>
-						<h1 className="links">LET'S TALK</h1>
-					</div>
-					<div className="first-grid">
-						<p>
-							Get in touch with me to discuss your project, ask questions, or
-							inquire about my services. I am here to assist you.
-						</p>
-						<p>Email: syiqra@hotmail.com</p>
-					</div>
-				</div>
-				<div className="footer">
+			<Main>
+				<Div>
+					<Container>
+						<Inquiry>
+							<p>Ready to Launch Your Online Success Story?</p>
+							{/* <p>LET'S TALK</p> */}
+						</Inquiry>
+						<h1>
+							IQRA <br />
+							IMRAN <br />
+							SYED
+						</h1>
+					</Container>
+					<Links>
+						<div>
+							<h3>GITHUB</h3>
+							<span>.01</span>
+						</div>
+						<div>
+							<h3>CONTACT</h3>
+							<span>.02</span>
+						</div>
+						<div>
+							<h3>RESUME</h3>
+							<span>.03</span>
+						</div>
+						<div>
+							<h3>SERVICES</h3>
+							<span>.04</span>
+						</div>
+					</Links>
 					<Footer />
-				</div>
-			</Div>
+				</Div>
+			</Main>
 		</>
 	);
 };
 
 export default Contact;
 
+const Main = styled.div`
+	/* width: 100vw; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
 const Div = styled.div`
-	width: 40vw;
-	.wrap {
+	background-color: var(--text-100);
+	color: var(--text-200);
+	border-top-right-radius: 3rem;
+	border-top-left-radius: 3rem;
+	width: 100vw;
+	height: 100vh;
+`;
+
+const Container = styled.div`
+	margin: 3rem 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	width: 100%;
+
+	h1 {
+		grid-column: 2;
+		font-size: 6rem;
+		text-align: right;
+		padding-right: 1rem;
+	}
+`;
+
+const Inquiry = styled.div`
+	grid-column: 1;
+	vertical-align: middle;
+	margin: auto;
+
+	p {
+		font-family: "Nunito", sans-serif;
+		font-size: 1.5rem;
+		line-height: 1;
+		padding-left: 1rem;
+	}
+`;
+
+const Links = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	height: 50vh;
+	gap: 2rem;
+
+	div {
 		display: flex;
-		justify-content: center;
+		flex-direction: row;
 		align-items: center;
-	}
-
-	.container-wrapper {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 5rem;
-		padding: 10rem 5rem;
-		font-family: "Nunito", sans-serif;
-		height: 100vh;
-	}
-
-	.first-grid {
-		font-size: 1.1rem;
-		line-height: 1.4;
-	}
-
-	.second-grid {
-		font-family: "Stardom", sans-serif;
-		font-size: 3rem;
-	}
-
-	.project {
-		font-family: "Nunito", sans-serif;
-		font-size: 1rem;
-	}
-
-	@media only screen and (max-width: 480px) {
-		.container-wrapper {
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(2, 1fr);
-			padding: 1rem 3rem;
-		}
-
-		.links {
-			font-size: 3rem;
-		}
+		margin-right: 1rem;
+		gap: 2rem;
+		border-bottom: solid 1px var(--text-200);
 	}
 `;

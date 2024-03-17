@@ -1,97 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import data from "./ProjectData";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { motion, useAnimation } from "framer-motion";
-// import "./portfolio.scss";
-import ProjectOne from "./ProjectOne";
-import ProjectTwo from "./ProjectTwo";
-import ProjectThree from "./ProjectThree";
-import ProjectFour from "./ProjectFour";
-import ProjectFive from "./ProjectFive";
-import ProjectSix from "./ProjectSix";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import { Carousel } from "react-bootstrap";
+import "./portfolio.scss";
+
 gsap.registerPlugin(ScrollTrigger);
 
-const textVariant = {
-	initial: {
-		opacity: 0,
-		x: 50,
-	},
-	animate: {
-		x: 0,
-		opacity: 1,
-		transition: {
-			duration: 2,
-		},
-	},
-};
-
 const Projects = () => {
-	const navigate = useNavigate();
 	const [selectedProject, setSelectedProject] = useState(null);
-	const cardData = [
-		{ title: "PERSONAL CALENDAR", link: "calendar", id: "1" },
-		{ title: "AI ARTICLE SUMMARIZER", link: "article-summarizer", id: "2" },
-		{ title: "CHAT-GPT CLONE", link: "chatgpt clone", id: "3" },
-		{ title: "PORTFOLIO", link: "portfolio", id: "4" },
-		{ title: "MÉTROPOLE", link: "metropole", id: "5" },
-		{ title: "ORBIT", link: "orbit", id: "6" },
-	];
-
-	const controls = useAnimation();
-
-	useEffect(() => {
-		gsap.from(".box", {
-			opacity: 0,
-			y: 50,
-			duration: 1,
-			scrollTrigger: {
-				trigger: ".box",
-				start: "top 80%",
-				end: "top 50%",
-				toggleActions: "play none none reverse",
-			},
-		});
-
-		gsap.from(".first-div, .projects", {
-			opacity: 0,
-			y: 0,
-			stagger: 0.1,
-			duration: 1,
-			scrollTrigger: {
-				trigger: ".box",
-				start: "top 80%",
-				end: "top 50%",
-				toggleActions: "play none none reverse",
-			},
-		});
-
-		controls.start({ opacity: 1, x: 0 });
-
-		return () => {
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-		};
-	}, [controls]);
-
-	const handleProjects = (action) => {
-		switch (action) {
-			case "PERSONAL CALENDAR":
-				return <ProjectOne />;
-			case "AI ARTICLE SUMMARIZER":
-				return <ProjectTwo />;
-			case "CHAT-GPT CLONE":
-				return <ProjectThree />;
-			case "PORTFOLIO":
-				return <ProjectFour />;
-			case "MÉTROPOLE":
-				return <ProjectFive />;
-			case "ORBIT":
-				return <ProjectSix />;
-			default:
-				return <p>Click me</p>;
-		}
-	};
 
 	const handleProjectClick = (title) => {
 		setSelectedProject(title);
@@ -118,122 +37,120 @@ const Projects = () => {
 		});
 	};
 
-	return (
-		<>
-			<Div className="firs-cont">
-				<div className="first-div">
-					{cardData.map((card, index) => (
-						<div key={index} className="box">
-							<span className="num"> {card.id}</span>
+	const handleProjects = (title) => {
+		const selectedProjectData = data.find((project) => project.title === title);
 
-							<p
-								className="projects"
-								onClick={() => handleProjectClick(card.title)}
-							>
-								{card.title}
+		if (selectedProjectData) {
+			return (
+				<div className="main-container">
+					<div className="inner-container">
+						<button className="close close-btn" onClick={handleCloseClick}>
+							X
+						</button>
+						<div className="text-container">
+							<h2 className="head">{selectedProjectData.title}</h2>
+							<p className="description">
+								{selectedProjectData.description}{" "}
+								<a
+									className="link"
+									href={selectedProjectData.link}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<MdOutlineArrowOutward />
+								</a>
 							</p>
 						</div>
-					))}
+						{Array.isArray(selectedProjectData.images) &&
+						selectedProjectData.images.length > 1 ? (
+							<div className="image-container">
+								<Carousel interval={6000} touch={true} pause="hover" fade>
+									{selectedProjectData.images.map((image, index) => (
+										<Carousel.Item key={index}>
+											<img
+												src={image.url}
+												alt={image.altText}
+												className="d-block w-100 centered-image"
+											/>
+										</Carousel.Item>
+									))}
+								</Carousel>
+							</div>
+						) : (
+							<div className="image-container">
+								<img
+									className="image centered-image"
+									src={selectedProjectData.images?.url}
+									alt={selectedProjectData.images?.altText}
+								/>
+							</div>
+						)}
+					</div>
 				</div>
-				{selectedProject && (
-					<ProjectContainer className="project-container">
-						<div>
-							<button className="close close-btn" onClick={handleCloseClick}>
-								CLOSE
-							</button>
-							{handleProjects(selectedProject)}
-						</div>
-					</ProjectContainer>
-				)}
-			</Div>
-		</>
+			);
+		} else {
+			return <p>Select a project</p>;
+		}
+	};
+
+	return (
+		<Div>
+			<Container>
+				{data.map((card, index) => (
+					<ProjectDiv
+						key={card.id}
+						className="project-container"
+						onClick={() => handleProjectClick(card.title)}
+					>
+						<span className="num"> {card.num}</span>
+						<p className="projects">{card.title}</p>
+					</ProjectDiv>
+				))}
+			</Container>
+			<div>{selectedProject && handleProjects(selectedProject)}</div>
+		</Div>
 	);
 };
 
 export default Projects;
 
 const Div = styled.div`
-	height: 100vh;
-	width: 70vw;
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-	margin-top: 6rem;
-	margin-left: 12rem;
-
-	.box {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-	}
-
-	.projects {
-		transition: transform 0.5s ease;
-		width: 80vw;
-		font-size: 6vh;
-		cursor: pointer;
-		padding-left: 1rem;
-
-		&:hover {
-			font-style: italic;
-			transform: translateX(1px);
-		}
-	}
-
-	@media only screen and (max-width: 480px) {
-		margin-top: 5rem;
-		.projects {
-			width: 50vh;
-			font-size: 4vh;
-		}
-	}
-`;
-
-const ProjectContainer = styled.div`
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	margin: 0 auto;
-	height: 100vh;
 	width: 100vw;
-	color: #eaded2;
-	background-color: #000814;
-	z-index: 10;
-	transform: translateY(100vh);
-	transition: transform 0.2s ease-in-out;
-	overflow-y: auto;
+	height: 100vh;
+`;
 
-	.close {
-		position: absolute;
-		top: 5rem;
-		right: 9rem;
-		color: #adb5bd;
-		border: solid rgba(255, 255, 255, 0.05) 1px;
-		outline: none;
-		z-index: 100;
-		cursor: pointer;
-		background: transparent;
-		backdrop-filter: blur(12.5px);
-		-webkit-backdrop-filter: blur(12.5px);
-		width: 12vh;
-		height: 5vh;
-		border-radius: 2rem;
-		box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
-		transition: box-shadow 0.3s ease-in-out;
+const Container = styled.div`
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(5, 1fr);
+	padding: 2rem;
+	font-family: "Nunito", sans-serif;
+`;
 
-		&:hover {
-			box-shadow: 0 0 50px 5px #cdb4db;
-		}
+const ProjectDiv = styled.div`
+	margin-top: 0.6rem;
+	padding: 0.5rem;
+	width: 15rem;
+	border-bottom: 1px solid #3e3e3e;
+	display: flex;
+	gap: 0.5rem;
+
+	p {
+		text-align: left;
+		font-size: 1rem;
+		margin: 0;
 	}
 
-	@media only screen and (max-width: 480px) {
-		.close {
-			top: 9rem;
-			right: 2rem;
-		}
+	.num {
+		font-size: 0.6rem;
+		margin-top: 0.4rem;
+	}
+
+	&:hover {
+		cursor: pointer;
 	}
 `;
