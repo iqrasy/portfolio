@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "./Theme";
 
 const Footer = () => {
 	const date = new Date();
@@ -25,4 +26,10 @@ const FooterContainer = styled.footer`
 	font-family: "Nunito", sans-serif;
 	color: var(--text-200);
 	font-size: 0.7rem;
+	background-color: var(--text-100);
+
+	@media (max-width: ${theme.breakpoints.sm}) {
+		position: relative;
+		bottom: 0;
+	}
 `;

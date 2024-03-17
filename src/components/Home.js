@@ -4,13 +4,10 @@ import Projects from "./portfolio/Projects";
 import Contact from "./Contact";
 import styled from "styled-components";
 import Hero from "./Hero";
-import Links from "./Links";
-import Footer from "./Footer";
 
 const Home = () => {
 	return (
 		<Main>
-			<Links />
 			<section id="Homepage">
 				<Hero />
 			</section>
@@ -23,7 +20,6 @@ const Home = () => {
 			<section id="Contact">
 				<Contact />
 			</section>
-			{/* <Footer /> */}
 		</Main>
 	);
 };
@@ -39,8 +35,4 @@ const Main = styled.div`
 		),
 		radial-gradient(at 6% 71%, hsla(0, 0%, 16%, 0.6) 0px, transparent 50%);
 	color: var(--text-100);
-
-	section {
-		height: 100vh;
-	}
 `;

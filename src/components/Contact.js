@@ -4,6 +4,7 @@ import { useAnimation } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Footer from "./Footer";
+import { theme } from "./Theme";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,7 +78,7 @@ const Contact = () => {
 							<span>.01</span>
 						</div>
 						<div>
-							<h3>CONTACT</h3>
+							<h3>SERVICES</h3>
 							<span>.02</span>
 						</div>
 						<div>
@@ -85,11 +86,13 @@ const Contact = () => {
 							<span>.03</span>
 						</div>
 						<div>
-							<h3>SERVICES</h3>
+							<h3>CONTACT</h3>
 							<span>.04</span>
 						</div>
 					</Links>
-					<Footer />
+					<FooterContainer>
+						<Footer />
+					</FooterContainer>
 				</Div>
 			</Main>
 		</>
@@ -99,11 +102,14 @@ const Contact = () => {
 export default Contact;
 
 const Main = styled.div`
-	/* width: 100vw; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+`;
+
+const FooterContainer = styled.footer`
+	margin-top: auto;
 `;
 
 const Div = styled.div`
@@ -120,13 +126,18 @@ const Container = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr;
-	width: 100%;
+	/* width: 100%; */
 
 	h1 {
 		grid-column: 2;
 		font-size: 6rem;
 		text-align: right;
 		padding-right: 1rem;
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			font-size: 3rem;
+			padding-right: 0.7rem;
+		}
 	}
 `;
 
@@ -140,6 +151,11 @@ const Inquiry = styled.div`
 		font-size: 1.5rem;
 		line-height: 1;
 		padding-left: 1rem;
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			font-size: 1.2rem;
+			padding-left: 0.7rem;
+		}
 	}
 `;
 
@@ -158,5 +174,21 @@ const Links = styled.div`
 		margin-right: 1rem;
 		gap: 2rem;
 		border-bottom: solid 1px var(--text-200);
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			gap: 1rem;
+
+			h3 {
+				font-size: 1rem;
+			}
+
+			span {
+				font-size: 0.7rem;
+			}
+		}
+	}
+
+	@media (max-width: ${theme.breakpoints.sm}) {
+		height: 60vh;
 	}
 `;

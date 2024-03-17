@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { theme } from "./Theme";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,7 +91,7 @@ const Div = styled.div`
 	align-items: flex-end;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	height: 100%;
+	height: 100vh;
 	overflow-x: hidden;
 
 	.pitch {
@@ -103,6 +104,7 @@ const Div = styled.div`
 			letter-spacing: 0.7rem;
 			font-size: 7rem;
 			width: 100%;
+			flex-wrap: wrap;
 		}
 
 		span {
@@ -113,39 +115,19 @@ const Div = styled.div`
 		}
 	}
 
-	@media only screen and (max-width: 480px) {
+	@media (max-width: ${theme.breakpoints.lg}) {
 		.pitch {
-			max-width: 80vw;
-			width: 80vw;
-
 			h1 {
-				width: 20rem;
-				font-size: 1.1rem;
-				text-indent: 0;
-				margin-left: 0;
-				margin-bottom: 7rem;
-				line-height: 1.4;
+				font-size: 4rem;
 			}
 		}
 	}
 
-	@media only screen and (max-width: 480px) {
+	@media (max-width: ${theme.breakpoints.sm}) {
+		align-items: center;
 		.pitch {
 			h1 {
-				font-size: 2rem;
-				line-height: 1.2;
-				margin-bottom: 1rem;
-			}
-
-			p {
-				font-size: 1rem;
-				width: 20rem;
-				text-align: left;
-				margin-bottom: 2rem;
-			}
-
-			.vision {
-				font-size: 1rem;
+				font-size: 1.2rem;
 			}
 		}
 	}

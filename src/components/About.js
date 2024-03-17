@@ -6,6 +6,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import starr from "../assets/starr.png";
 import squares from "../assets/squares.png";
 import circles from "../assets/circles.png";
+import { theme } from "./Theme";
+import circle from "./circle.json";
+import Lottie from "react-lottie";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +61,15 @@ const About = () => {
 		};
 	}, [controls]);
 
+	const defaultOptions = {
+		loop: true,
+		autoplay: true,
+		animationData: circle,
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid slice",
+		},
+	};
+
 	return (
 		<Div>
 			<motion.div
@@ -66,19 +78,22 @@ const About = () => {
 				initial="initial"
 				animate={controls}
 			>
-				<SecondBox>
+				<SecondBox as={GridItem} x>
 					<Header>
-						<h1 className="head-cont"> ABOUT </h1>
+						<h1 className="head-cont">
+							{" "}
+							ABOUT <span>ME</span>
+						</h1>
 					</Header>
 				</SecondBox>
-				<ThirdBox>
+				<ThirdBox as={GridItem}>
 					<SubHeader>
 						<p>
 							Hey there! I'm Iqra - a Frontend Web Developer based in Montreal
 						</p>
 					</SubHeader>
 				</ThirdBox>
-				<FourthBox>
+				<FourthBox as={GridItem}>
 					<Intro>
 						<p>
 							My goal is to make the web not only functional but also visually
@@ -86,7 +101,7 @@ const About = () => {
 						</p>
 					</Intro>
 				</FourthBox>
-				<FifthBox>
+				<FifthBox as={GridItem}>
 					<Description>
 						<p>
 							I create seamless and responsive UI's that elevate digital
@@ -94,31 +109,18 @@ const About = () => {
 						</p>
 					</Description>
 				</FifthBox>
-				<ImageContainer>
+				{/* <LottieContainer>
+					<Lottie options={defaultOptions} height={180} width={100} />
+				</LottieContainer> */}
+				{/* <ImageContainer as={GridItem}>
 					<img src={starr} alt="star" />
 				</ImageContainer>
-				<SquareContainer>
+				<SquareContainer as={GridItem}>
 					<img src={squares} alt="squares" />
 				</SquareContainer>
-				<CircleContainer>
+				<CircleContainer as={GridItem}>
 					<img src={circles} alt="rings" />
-				</CircleContainer>
-				{/* <div>
-					<h2 className="experience">EXPERIENCE</h2>
-					<ul className="skills">
-						<li> Degree in web development</li>
-						<li> 1+ year of experience </li>
-						<li> Currently working at Schevratex Yarns as a Web Developer</li>
-					</ul>
-				</div>
-				<div>
-					<h2 className="experience">SKILLS</h2>
-					<p className="skills">
-						JavaScript / React.js / MongoDB / Node.js / Express.js / Three.js /
-						PostgreSQL / Bootstrap / Next.js / json / REST / GIT / GitHub /
-						Auth0 / NPM / BASH
-					</p>
-				</div> */}
+				</CircleContainer> */}
 			</motion.div>
 		</Div>
 	);
@@ -151,23 +153,28 @@ const Div = styled.div`
 		margin: 0 auto;
 		font-family: "Nunito", sans-serif;
 		letter-spacing: 0.1rem;
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
-	/* 
-	.experience {
-		margin-bottom: 1rem;
-		font-family: "Stardom", sans-serif;
-	} */
+	@media (max-width: ${theme.breakpoints.sm}) {
+		background-image: none;
+	}
+`;
 
-	/* li {
-		list-style-type: none;
-	} */
+const GridItem = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	box-sizing: border-box;
 
-	/* .skills {
-		margin-bottom: 2rem;
-		width: 40vw;
-		line-height: 1.5;
-	} */
+	@media (max-width: ${theme.breakpoints.sm}) {
+		padding: 0.4rem 1rem;
+	}
 `;
 
 const Header = styled.div`
@@ -176,14 +183,30 @@ const Header = styled.div`
 	text-align: center;
 
 	h1 {
-		font-family: "Stardom", sans-serif;
+		/* font-family: "Stardom", sans-serif; */
+		font-family: "Nunito", sans-serif;
+		color: var(--text-200);
 		font-size: 4rem;
+
+		span {
+			font-family: "Stardom", sans-serif;
+			color: var(--text-100);
+		}
+
+		@media (max-width: ${theme.breakpoints.lg}) {
+			font-size: 2rem;
+		}
 	}
 `;
 
 const SecondBox = styled.div`
 	grid-column: 1;
 	grid-row: 3;
+
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 1;
+		grid-row: 1;
+	}
 `;
 
 const SubHeader = styled.div`
@@ -191,6 +214,20 @@ const SubHeader = styled.div`
 
 	p {
 		padding: 1rem;
+
+		@media (max-width: ${theme.breakpoints.lg}),
+			(max-width: ${theme.breakpoints.xs}) {
+			font-size: 0.8rem;
+			padding: 0;
+		}
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: ${theme.breakpoints.sm}) {
+		width: 18rem;
 	}
 `;
 
@@ -199,11 +236,30 @@ const ThirdBox = styled.div`
 	grid-row: 2;
 	display: flex;
 	align-items: center;
+
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 1;
+		grid-row: 2;
+	}
 `;
 
 const Intro = styled.div`
 	p {
 		padding: 1rem;
+
+		@media (max-width: ${theme.breakpoints.lg}),
+			(max-width: ${theme.breakpoints.xs}) {
+			font-size: 0.8rem;
+			padding: 0;
+		}
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: ${theme.breakpoints.sm}) {
+		width: 18rem;
 	}
 `;
 
@@ -212,11 +268,30 @@ const FourthBox = styled.div`
 	grid-row: 4;
 	display: flex;
 	align-items: center;
+
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 1;
+		grid-row: 3;
+	}
 `;
 
 const Description = styled.div`
 	p {
 		padding: 1rem;
+
+		@media (max-width: ${theme.breakpoints.lg}),
+			(max-width: ${theme.breakpoints.xs}) {
+			font-size: 0.8rem;
+			padding: 0;
+		}
+
+		@media (max-width: ${theme.breakpoints.sm}) {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: ${theme.breakpoints.sm}) {
+		width: 18rem;
 	}
 `;
 
@@ -225,6 +300,11 @@ const FifthBox = styled.div`
 	grid-row: 3;
 	display: flex;
 	align-items: center;
+
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 2;
+		grid-row: 3;
+	}
 `;
 
 const ImageContainer = styled.div`
@@ -234,9 +314,18 @@ const ImageContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
 	img {
 		height: 15vh;
 		opacity: 0.3;
+
+		@media (max-width: ${theme.breakpoints.lg}) {
+			height: 10vh;
+		}
 	}
 `;
 
@@ -247,9 +336,18 @@ const SquareContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
+	@media (max-width: ${theme.breakpoints.lg}) {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
 	img {
 		height: 15vh;
 		opacity: 0.3;
+
+		@media (max-width: ${theme.breakpoints.lg}) {
+			height: 10vh;
+		}
 	}
 `;
 
@@ -263,5 +361,36 @@ const CircleContainer = styled.div`
 	img {
 		height: 15vh;
 		opacity: 0.3;
+
+		@media (max-width: ${theme.breakpoints.lg}) {
+			height: 10vh;
+		}
 	}
 `;
+
+const LottieContainer = styled.div`
+	position: relative;
+	left: 8rem;
+	bottom: 10rem;
+	overflow-x: hidden;
+	border: solid green 1px;
+`;
+
+{
+	/* <div>
+					<h2 className="experience">EXPERIENCE</h2>
+					<ul className="skills">
+						<li> Degree in web development</li>
+						<li> 1+ year of experience </li>
+						<li> Currently working at Schevratex Yarns as a Web Developer</li>
+					</ul>
+				</div>
+				<div>
+					<h2 className="experience">SKILLS</h2>
+					<p className="skills">
+						JavaScript / React.js / MongoDB / Node.js / Express.js / Three.js /
+						PostgreSQL / Bootstrap / Next.js / json / REST / GIT / GitHub /
+						Auth0 / NPM / BASH
+					</p>
+				</div> */
+}
